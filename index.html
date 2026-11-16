@@ -1,0 +1,1823 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<script>/* public standalone build: no Claude runtime here, so photo grading is off and the sample pieces are shown */
+if(!window.claude){window.claude={use:async()=>null};window.__standalone=true;}</script>
+<title>The Empty Return - IKEA Taichung Take-Back</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  color-scheme: light;
+  --blue:#0058A3;
+  --blue-dark:#00437A;
+  --yellow:#FFDB00;
+  --ink:#111111;
+  --soft:#484848;
+  --faint:#767676;
+  --bg:#F5F5F5;
+  --card:#FFFFFF;
+  --line:#DFDFDF;
+  --fill:#F5F5F5;
+  --green:#0A8A00;
+  --green-bg:#EAF5E9;
+  --red:#E00751;
+  --red-bg:#FDEBF1;
+  --yellow-bg:#FFF6CC;
+  --on-blue:#FFFFFF;
+  --r:8px;
+  box-sizing:border-box;
+  padding-top: env(safe-area-inset-top, 0px);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+:root:not([data-theme="light"]){
+  @media (prefers-color-scheme: dark){
+    color-scheme: dark;
+    --blue:#1F7AC4;
+    --blue-dark:#0058A3;
+    --ink:#F2F2F2;
+    --soft:#C4C4C4;
+    --faint:#9A9A9A;
+    --bg:#0E1114;
+    --card:#191D21;
+    --line:#2E343A;
+    --fill:#22272C;
+    --green:#5FC256;
+    --green-bg:#16251A;
+    --red:#F4728F;
+    --red-bg:#2A1119;
+    --yellow-bg:#2D2708;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme: dark;
+  --blue:#1F7AC4;--blue-dark:#0058A3;--ink:#F2F2F2;--soft:#C4C4C4;--faint:#9A9A9A;
+  --bg:#0E1114;--card:#191D21;--line:#2E343A;--fill:#22272C;
+  --green:#5FC256;--green-bg:#16251A;--red:#F4728F;--red-bg:#2A1119;--yellow-bg:#2D2708;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top: env(safe-area-inset-top, 0px)}
+body{
+  margin:0;background:var(--bg);color:var(--ink);
+  font-family:"Noto Sans","Noto IKEA",system-ui,-apple-system,sans-serif;
+  font-size:16px;line-height:1.5;-webkit-font-smoothing:antialiased;
+  font-variant-numeric:tabular-nums;
+}
+.shell{max-width:440px;margin:0 auto;padding:0 0 48px}
+.app{background:var(--card);min-height:100vh}
+@media(min-width:520px){
+  .shell{padding:20px 16px 48px}
+  .app{min-height:0;border-radius:var(--r);overflow:hidden;box-shadow:0 1px 4px rgba(0,0,0,.12)}
+}
+
+/* brand bar */
+.brand{background:#0058A3;color:var(--on-blue);padding:14px 20px;display:flex;align-items:center;gap:12px}
+.brand .mark{height:34px;width:auto;flex:none;display:block}
+.brand b{font-size:16px;font-weight:700;letter-spacing:-0.01em;line-height:1.2}
+.brand span{display:block;font-size:12px;font-weight:400;opacity:.85}
+
+.rail{display:flex;gap:4px;padding:16px 20px 0}
+.rail i{flex:1;height:4px;background:var(--fill);border-radius:2px}
+.rail i.on{background:var(--blue)}
+
+.pad{padding:20px}
+h1{font-size:26px;line-height:1.2;font-weight:700;margin:0 0 10px;letter-spacing:-0.02em}
+h2{font-size:21px;font-weight:700;margin:0 0 8px;letter-spacing:-0.015em}
+p{margin:0 0 16px}
+p.lead{color:var(--soft);font-size:15px}
+.tiny{font-size:12.5px;color:var(--faint);line-height:1.5}
+
+button,select{font:inherit}
+.primary,.ghost{display:block;width:100%;border:1px solid transparent;border-radius:64px;cursor:pointer;font-weight:700;font-size:15px;padding:14px}
+.primary{background:var(--blue);color:#fff}
+.primary:hover{background:var(--blue-dark)}
+.primary:disabled{background:var(--fill);color:var(--faint);cursor:not-allowed}
+.ghost{background:transparent;color:var(--ink);border-color:var(--ink);margin-top:10px}
+button:focus-visible,select:focus-visible,input:focus-visible,label:focus-within{outline:2px solid var(--blue);outline-offset:2px}
+
+.drop{display:block;border:1px dashed var(--line);border-radius:var(--r);padding:30px 18px;text-align:center;background:var(--fill);margin-bottom:16px;cursor:pointer}
+.drop strong{display:block;font-size:16px;font-weight:700;margin-bottom:4px}
+.drop p{margin:0;color:var(--faint);font-size:13.5px}
+input[type=file]{display:none}
+.shots-head{display:flex;justify-content:space-between;align-items:baseline;gap:10px;margin:4px 0 8px}
+.shots-head strong{font-size:16px}
+.shots-head span{font-size:13px;color:var(--faint);white-space:nowrap}
+.shots-head span.ok{color:var(--green);font-weight:700}
+.shots{display:grid;grid-template-columns:repeat(2,1fr);gap:8px}
+.shot{position:relative}
+.shot label{display:block;cursor:pointer;border:1px dashed var(--line);border-radius:var(--r);background:var(--fill);aspect-ratio:4/3;overflow:hidden;position:relative}
+.shot label:focus-within{outline:2px solid var(--blue);outline-offset:2px}
+.shot input{position:absolute;width:1px;height:1px;opacity:0}
+.shot .ph{position:absolute;inset:0 0 26px;display:grid;place-items:center;align-content:center;gap:2px;color:var(--faint)}
+.shot .ph b{font-size:12px}
+.shot img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.shot .cap{position:absolute;left:0;right:0;bottom:0;padding:5px 8px;font-size:11.5px;line-height:1.3;color:var(--soft);background:var(--card);border-top:1px solid var(--line)}
+.shot.has label{border-style:solid;border-color:var(--blue)}
+.shot.has .cap{background:rgba(0,0,0,.55);color:#fff;border-top:0}
+.shot .x{position:absolute;top:6px;right:6px;width:28px;height:28px;border-radius:50%;border:0;background:rgba(0,0,0,.6);color:#fff;font-size:18px;line-height:1;cursor:pointer}
+#shotsHint{margin:8px 0 14px}
+.thumbs{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;margin-bottom:16px}
+.thumbs img{width:100%;aspect-ratio:1;object-fit:cover;border-radius:var(--r);border:1px solid var(--line)}
+
+.grade{display:flex;align-items:center;gap:14px;padding:14px;border-radius:var(--r);background:var(--fill);margin-bottom:16px}
+.grade .letter{width:48px;height:48px;flex:none;border-radius:var(--r);background:var(--blue);color:#fff;display:grid;place-items:center;font-size:24px;font-weight:700}
+.grade .letter.stop{background:var(--red)}
+.grade b{display:block;font-size:15px;font-weight:700}
+.grade span{font-size:13px;color:var(--faint)}
+
+.match{border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;margin:0 0 14px}
+.match .mk{margin:0 0 2px;font-size:12px;color:var(--faint)}
+.match b{display:block;font-size:16px}
+.match span{display:block;font-size:13px;color:var(--soft);margin-bottom:10px}
+.match span.low{color:#8a5a00}
+.match label{display:block;font-size:12.5px;color:var(--faint);margin-bottom:4px}
+.match select{width:100%;padding:10px;font:inherit;font-size:14px;border:1px solid var(--line);border-radius:var(--r);background:var(--card);color:var(--ink)}
+ul.checks{list-style:none;margin:0 0 10px;padding:0;font-size:14px}
+ul.checks li{display:flex;gap:8px;padding:3px 0;color:var(--soft)}
+ul.checks li i{font-style:normal;font-weight:700;width:16px;text-align:center}
+ul.checks li.ok i{color:var(--green)}
+ul.checks li.bad i{color:var(--red)}
+ul.notes{margin:0 0 18px;padding-left:20px;font-size:14.5px;color:var(--soft)}
+ul.notes li{margin-bottom:5px}
+
+.field{margin-bottom:16px}
+.field label{display:block;font-size:12.5px;color:var(--faint);margin-bottom:5px}
+.field select,.field input[type=number]{
+  width:100%;padding:13px;font:inherit;border:1px solid var(--line);border-radius:var(--r);
+  background:var(--card);color:var(--ink);
+}
+
+.money{border-top:1px solid var(--line);padding-top:14px;margin-bottom:18px}
+.money div{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:5px 0;color:var(--soft)}
+.money div.sum{
+  background:var(--yellow-bg);border-radius:var(--r);margin-top:10px;padding:14px;
+  font-size:20px;font-weight:700;color:var(--ink);
+}
+.money .pend{color:var(--faint)}
+
+.opt{display:block;border:1px solid var(--line);border-radius:var(--r);padding:14px;margin-bottom:10px;cursor:pointer}
+.opt:has(input:checked){border-color:var(--blue);box-shadow:inset 0 0 0 1px var(--blue)}
+.opt .top{display:flex;justify-content:space-between;align-items:baseline;gap:10px}
+.opt input{accent-color:var(--blue);margin:0 10px 0 0}
+.opt b{font-weight:700;font-size:15px}
+.opt .delta{font-weight:700;font-size:14px;white-space:nowrap;color:var(--faint)}
+.opt .delta.up{color:var(--green)}
+.opt .delta.down{color:var(--red)}
+.opt .why{display:block;font-size:13px;color:var(--faint);margin-top:5px;padding-left:26px}
+
+.flag{padding:14px;border-radius:var(--r);background:var(--yellow-bg);font-size:14px;margin-bottom:18px;color:var(--ink)}
+.flag.stop{background:var(--red-bg)}
+.flag b{display:block;font-weight:700;margin-bottom:4px}
+
+.think{text-align:center;padding:60px 20px}
+.think .dot{width:10px;height:10px;border-radius:50%;background:var(--blue);display:inline-block;margin:0 4px;animation:p 1.2s infinite}
+.think .dot:nth-child(2){animation-delay:.18s}
+.think .dot:nth-child(3){animation-delay:.36s}
+@keyframes p{0%,70%,100%{opacity:.25}35%{opacity:1}}
+@media(prefers-reduced-motion:reduce){.think .dot{animation:none;opacity:.6}}
+
+.done{text-align:center;background:var(--yellow-bg);border-radius:var(--r);padding:22px 16px;margin-bottom:18px}
+.done .big{font-size:38px;font-weight:700;line-height:1.1;letter-spacing:-0.02em}
+.done .tiny{color:var(--soft)}
+.impact{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:18px}
+.impact div{background:var(--fill);border-radius:var(--r);padding:14px}
+.impact b{display:block;font-size:22px;font-weight:700}
+.impact span{font-size:12px;color:var(--faint)}
+
+.foot{padding:16px 20px;border-top:1px solid var(--line);background:var(--fill)}
+.err{color:var(--red);font-size:14px;margin-bottom:14px}
+.hidden{display:none}
+.legal{padding:0 16px;margin-top:16px}
+
+/* view switch */
+.views{position:sticky;top:0;z-index:5;display:flex;justify-content:center;padding:10px 16px;background:var(--bg);border-bottom:1px solid var(--line)}
+.views .seg{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:64px;padding:3px}
+.views button{border:0;background:transparent;color:var(--soft);font-weight:700;font-size:13.5px;padding:8px 11px;white-space:nowrap;border-radius:64px;cursor:pointer}
+.views button[aria-pressed="true"]{background:var(--blue);color:#fff}
+.views{gap:6px 8px;align-items:center;flex-wrap:wrap}
+.views .vlabel{flex-basis:100%;text-align:center;font-size:11px;font-weight:700;letter-spacing:.04em;text-transform:uppercase;color:var(--faint)}
+.views .lang{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:64px;padding:8px 14px;font:inherit;font-size:13.5px;font-weight:700;cursor:pointer}
+.views .badge{display:inline-block;min-width:18px;padding:0 5px;margin-left:6px;border-radius:9px;background:var(--yellow);color:#111;font-size:11.5px;line-height:18px}
+.views .badge:empty{display:none}
+
+/* ops view */
+.ops{max-width:1120px;margin:0 auto;padding:24px 16px 56px}
+.ops-head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px;margin-bottom:20px}
+.ops-head h1{font-size:clamp(22px,3.4vw,30px);max-width:24ch;margin:4px 0 6px}
+.ops-head .lead{margin:0;max-width:60ch}
+.eyebrow{margin:0;font-size:12.5px;font-weight:700;color:var(--blue);letter-spacing:.02em}
+.ops-actions{display:flex;gap:8px}
+.ops-actions .primary,.ops-actions .ghost{display:inline-block;width:auto;margin:0;padding:11px 20px;font-size:14px}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:14px}
+@media(min-width:900px){.kpis{grid-template-columns:repeat(3,1fr)}}
+.kpi{background:var(--card);border-radius:var(--r);padding:14px 16px;border:1px solid var(--line)}
+.kpi .k{font-size:12.5px;color:var(--faint)}
+.kpi .v{font-size:28px;font-weight:700;letter-spacing:-0.02em;line-height:1.15}
+.kpi .u{font-size:12.5px;color:var(--soft)}
+.kpi.hl{background:var(--yellow-bg);border-color:transparent}
+.ops-grid{display:grid;grid-template-columns:1fr;gap:14px;margin-bottom:14px}
+@media(min-width:900px){.ops-grid{grid-template-columns:minmax(0,1.25fr) minmax(0,1fr)}}
+.card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:16px}
+.card h3{font-size:15px;font-weight:700;margin:0 0 2px}
+.card .hint{font-size:13px;color:var(--faint);margin:0 0 12px}
+svg.map{display:block;width:100%;height:auto}
+.map .dist{font-size:11px;fill:var(--faint);font-family:inherit}
+.map .road{stroke:var(--line);stroke-width:5;fill:none;stroke-linecap:round}
+.map .route{fill:none;stroke:var(--blue);stroke-width:3;stroke-linejoin:round;transition:d .5s ease}
+.map .stop circle{fill:var(--card);stroke:var(--blue);stroke-width:2.5}
+.map .stop text{font-size:11px;font-weight:700;fill:var(--blue);text-anchor:middle;dominant-baseline:central}
+.map .pk rect{fill:var(--card);stroke:var(--ink);stroke-width:1.5;stroke-dasharray:3 2}
+.map .pk.on rect{fill:var(--yellow);stroke-dasharray:none}
+.map .pk text{font-size:10px;font-weight:700;fill:var(--ink);text-anchor:middle;dominant-baseline:central}
+.map .pk.new rect{animation:pulse 1.4s ease-in-out 3}
+@keyframes pulse{50%{transform:scale(1.35)}}
+.map .pk rect{transform-box:fill-box;transform-origin:center}
+.map .store rect{fill:var(--blue)}
+.map .store text{font-size:10px;font-weight:700;fill:#fff;text-anchor:middle;dominant-baseline:central}
+.legend{display:flex;flex-wrap:wrap;gap:14px;font-size:12.5px;color:var(--faint);margin-top:8px}
+.legend i{display:inline-block;width:11px;height:11px;margin-right:5px;vertical-align:-1px;border-radius:2px}
+.load{display:flex;align-items:flex-end;gap:4px;height:190px;padding-top:6px;border-bottom:1px solid var(--line);position:relative}
+.load .col{flex:1;display:flex;flex-direction:column;justify-content:flex-end;height:100%;min-width:0}
+.load .col span{display:block;transition:height .45s ease}
+.load .col .n{background:var(--blue)}
+.load .col .p{background:var(--yellow)}
+.load .cap{position:absolute;left:0;right:0;top:6px;border-top:1px dashed var(--faint)}
+.load .cap em{position:absolute;right:0;top:-17px;font-style:normal;font-size:11px;color:var(--faint)}
+.loadx{display:flex;gap:4px;margin-top:4px}
+.loadx span{flex:1;text-align:center;font-size:11px;color:var(--faint);min-width:0}
+.loadx span.p{color:var(--ink);font-weight:700}
+.scroll{overflow-x:auto}
+table.q{width:100%;border-collapse:collapse;font-size:14px;min-width:640px}
+table.q th{text-align:left;font-size:12px;color:var(--faint);font-weight:500;padding:6px 8px 6px 0;border-bottom:1px solid var(--line)}
+table.q td{padding:10px 8px 10px 0;border-bottom:1px solid var(--line);vertical-align:middle}
+table.q td.n{font-variant-numeric:tabular-nums;white-space:nowrap}
+table.q tr.new td{background:var(--yellow-bg)}
+table.q .tag{display:inline-block;font-size:11px;font-weight:700;padding:1px 6px;border-radius:4px;background:var(--yellow);color:#111;margin-left:6px}
+table.q .gr{display:inline-grid;place-items:center;width:24px;height:24px;border-radius:5px;background:var(--blue);color:#fff;font-weight:700;font-size:13px}
+table.q .gr.na{background:var(--fill);color:var(--soft)}
+table.q button{border:1px solid var(--blue);background:transparent;color:var(--blue);font-weight:700;font-size:13px;border-radius:64px;padding:6px 14px;cursor:pointer}
+table.q .placed{font-size:13px;color:var(--soft)}
+table.q .placed b{color:var(--green)}
+table.q .nofit{font-size:13px;color:var(--red)}
+.cmp .row{display:grid;grid-template-columns:minmax(120px,190px) 1fr 96px;gap:10px;align-items:center;margin-bottom:8px;font-size:14px}
+@media(max-width:520px){.cmp .row{grid-template-columns:96px 1fr 56px;font-size:13px}}
+.cmp .t{height:18px;background:var(--fill);border-radius:3px;overflow:hidden}
+.cmp .t span{display:block;height:100%;transition:width .45s ease}
+.cmp .v{text-align:right;font-weight:700;font-variant-numeric:tabular-nums}
+.ops .tiny{max-width:90ch}
+#vCustomer[hidden],#vOps[hidden],#vCrew[hidden]{display:none}
+.brand.crewbar{background:#1D1D1B}
+.route{list-style:none;margin:0;padding:0}
+.route li{display:flex;align-items:center;gap:12px;padding:9px 0;border-bottom:1px solid var(--line);font-size:14px;color:var(--soft)}
+.route li .num{flex:none;width:30px;height:30px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:700;border:2px solid var(--blue);color:var(--blue)}
+.route li.end .num{border-color:var(--faint);color:var(--faint)}
+.route li b{color:var(--ink)}
+.route li.pk{padding:6px 0}
+.route li.pk button{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:var(--yellow-bg);border:1px solid var(--yellow);border-radius:var(--r);padding:10px;font:inherit;color:var(--ink);cursor:pointer}
+.route li.pk button:disabled{cursor:default;background:var(--fill);border-color:var(--line)}
+.route li.pk .num{border-radius:6px;border:0;background:var(--yellow);color:#111;width:34px}
+.route li.pk div{flex:1;min-width:0}
+.route li.pk div span{display:block;font-size:12.5px;color:var(--faint)}
+.route li.pk em{font-style:normal;font-size:12px;font-weight:700;white-space:nowrap;color:var(--blue)}
+.route li.pk.collected em{color:var(--green)}
+.route li.pk.declined em{color:var(--red)}
+.booked{display:flex;gap:12px;align-items:center;background:var(--fill);border-radius:var(--r);padding:12px;margin:8px 0 18px}
+.booked .letter{width:40px;height:40px;flex:none;border-radius:var(--r);background:var(--blue);color:#fff;display:grid;place-items:center;font-size:20px;font-weight:700}
+.booked .letter.na{background:var(--line);color:var(--soft)}
+.booked b{display:block;font-size:14px}
+.booked span{font-size:13px;color:var(--faint)}
+h3.sub{font-size:14px;font-weight:700;margin:0 0 8px}
+.chk{display:flex;gap:10px;align-items:center;font-size:14px;padding:6px 0}
+.chk input{width:18px;height:18px;accent-color:var(--blue);margin:0}
+.gbtns{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.gbtns button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:var(--r);padding:12px 0;font:inherit;font-size:18px;font-weight:700;cursor:pointer}
+.gbtns button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.gbtns button.d[aria-pressed="true"]{background:var(--red);border-color:var(--red)}
+.stepper{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:64px;overflow:hidden}
+.stepper button{border:0;background:var(--card);color:var(--ink);font:inherit;font-size:20px;font-weight:700;width:46px;height:42px;cursor:pointer}
+.stepper output{min-width:40px;text-align:center;font-weight:700;font-size:16px}
+.done.dec{background:var(--red-bg)}
+#cwAccept:disabled{background:var(--fill);color:var(--faint);cursor:not-allowed}
+.samples{margin:18px 0 6px;padding-top:14px;border-top:1px solid var(--line)}
+.samples .tiny{margin:0 0 10px}
+.srow{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+.sample{display:block;border:1px solid var(--line);background:var(--card);border-radius:var(--r);padding:6px;cursor:pointer;font:inherit;color:var(--ink);text-align:center}
+.sample:hover{border-color:var(--blue)}
+.sample img{display:block;width:100%;aspect-ratio:1;border-radius:4px;margin-bottom:6px}
+.sample span{font-size:12.5px;font-weight:700}
+.sample:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.days{display:flex;flex-wrap:wrap;gap:8px}
+.days button{border:1px solid var(--line);background:var(--card);color:var(--ink);border-radius:64px;padding:8px 14px;font:inherit;font-size:14px;font-weight:700;cursor:pointer}
+.days button[aria-pressed="true"]{background:var(--blue);border-color:var(--blue);color:#fff}
+.days button:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.when{display:flex;justify-content:space-between;gap:12px;font-size:14.5px;padding:12px 14px;border:1px solid var(--line);border-radius:var(--r);margin-bottom:18px}
+.when span{color:var(--faint);white-space:nowrap}
+.when b{text-align:right}
+ol.steps{list-style:none;margin:0 0 18px;padding:0}
+ol.steps li{position:relative;padding:0 0 14px 28px;font-size:14px;color:var(--soft)}
+ol.steps li::before{content:"";position:absolute;left:5px;top:5px;width:10px;height:10px;border-radius:50%;border:2px solid var(--line);background:var(--card)}
+ol.steps li::after{content:"";position:absolute;left:10px;top:19px;bottom:0;width:2px;background:var(--line)}
+ol.steps li:last-child::after{display:none}
+ol.steps li.on::before{background:var(--blue);border-color:var(--blue)}
+ol.steps b{display:block;color:var(--ink);font-size:14.5px}
+.invite{font-size:13.5px;background:var(--fill);border-radius:var(--r);padding:12px;margin:10px 0 0;user-select:all}
+.sl{display:grid;gap:6px;max-width:520px}
+.sl label{display:flex;justify-content:space-between;gap:10px;font-size:13.5px;color:var(--soft)}
+.sl output{font-weight:700;color:var(--ink);font-variant-numeric:tabular-nums}
+.sl input{width:100%;accent-color:var(--blue);margin:0 0 10px}
+</style>
+</head>
+<body>
+<nav class="views" aria-label="Choose view"><span class="vlabel" id="vLabel">Hackathon prototype · not an IKEA service</span><div class="seg">
+  <button type="button" id="tabC" aria-pressed="true"><span id="tabCL">Customer</span></button>
+  <button type="button" id="tabW" aria-pressed="false"><span id="tabWL">Crew</span></button>
+  <button type="button" id="tabO" aria-pressed="false"><span id="tabOL">IKEA ops</span><span class="badge" id="opsBadge"></span></button>
+</div><button type="button" class="lang" id="langBtn">中文</button></nav>
+<div class="shell" id="vCustomer">
+  <div class="app">
+
+    <div class="brand">
+      <img class="mark" src="data:image/png;base64,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" alt="IKEA">
+      <div><b>The Empty Return</b><span>Furniture take-back · IKEA Taichung</span></div>
+    </div>
+
+    <div class="rail" id="rail"><i class="on"></i><i></i><i></i><i></i></div>
+
+    <!-- 1 CAPTURE -->
+    <section class="pad" id="s1">
+      <h1>A van is already heading to your street.</h1>
+      <p class="lead">Every IKEA delivery drives back to the store half empty. Put your old furniture on that ride and get store credit for it.</p>
+      <div class="shots-head"><strong id="shotsH">Add 4 photos of the piece</strong><span id="shotsCount">0 of 4</span></div>
+      <div class="shots" id="shots">
+        <div class="shot" data-i="0"><label><input type="file" accept="image/*" multiple><span class="ph"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><b>1</b></span><img alt="" hidden><span class="cap">Whole piece, front</span></label><button type="button" class="x" hidden aria-label="Remove photo 1">&times;</button></div>
+        <div class="shot" data-i="1"><label><input type="file" accept="image/*" multiple><span class="ph"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><b>2</b></span><img alt="" hidden><span class="cap">Second angle, side or back</span></label><button type="button" class="x" hidden aria-label="Remove photo 2">&times;</button></div>
+        <div class="shot" data-i="2"><label><input type="file" accept="image/*" multiple><span class="ph"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><b>3</b></span><img alt="" hidden><span class="cap">Closest damage or wear</span></label><button type="button" class="x" hidden aria-label="Remove photo 3">&times;</button></div>
+        <div class="shot" data-i="3"><label><input type="file" accept="image/*" multiple><span class="ph"><svg viewBox="0 0 24 24" width="22" height="22" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M4 8h3l2-3h6l2 3h3v11H4z"/><circle cx="12" cy="13" r="3.5" fill="none" stroke="currentColor" stroke-width="1.8"/></svg><b>4</b></span><img alt="" hidden><span class="cap">Label underneath, or a detail</span></label><button type="button" class="x" hidden aria-label="Remove photo 4">&times;</button></div>
+      </div>
+      <p class="tiny" id="shotsHint">All four are needed to grade it fairly. No label? Photograph any detail instead. Tap a tile to take or choose a photo; you can also pick several at once.</p>
+      <div class="thumbs hidden" id="thumbs"></div>
+      <p class="err hidden" id="e1"></p>
+      <button class="primary" id="go1" disabled>Check what it is worth</button>
+      <div class="samples" id="samples" hidden>
+        <p class="tiny">Photo grading runs live in our full prototype. In this public version, try a sample piece: it uses a preset result instead of reading a photo.</p>
+        <div class="srow">
+          <button type="button" class="sample" data-s="chest"><img alt="" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22%23E9E4DA%22/%3E%3Crect%20y%3D%2296%22%20width%3D%22120%22%20height%3D%2224%22%20fill%3D%22%23CFC6B6%22/%3E%3Crect%20x%3D%2226%22%20y%3D%2222%22%20width%3D%2268%22%20height%3D%2274%22%20rx%3D%222%22%20fill%3D%22%23F6F3EC%22%20stroke%3D%22%238C8172%22%20stroke-width%3D%222%22/%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%238C8172%22%20stroke-width%3D%221.6%22%3E%3Crect%20x%3D%2231%22%20y%3D%2227%22%20width%3D%2258%22%20height%3D%2220%22/%3E%3Crect%20x%3D%2231%22%20y%3D%2250%22%20width%3D%2258%22%20height%3D%2220%22/%3E%3Crect%20x%3D%2231%22%20y%3D%2273%22%20width%3D%2258%22%20height%3D%2218%22/%3E%3C/g%3E%3Cg%20fill%3D%22%238C8172%22%3E%3Crect%20x%3D%2254%22%20y%3D%2235%22%20width%3D%2212%22%20height%3D%223%22%20rx%3D%221.5%22/%3E%3Crect%20x%3D%2254%22%20y%3D%2258%22%20width%3D%2212%22%20height%3D%223%22%20rx%3D%221.5%22/%3E%3Crect%20x%3D%2254%22%20y%3D%2280%22%20width%3D%2212%22%20height%3D%223%22%20rx%3D%221.5%22/%3E%3C/g%3E%3Crect%20x%3D%2226%22%20y%3D%2296%22%20width%3D%225%22%20height%3D%225%22%20fill%3D%22%238C8172%22/%3E%3Crect%20x%3D%2289%22%20y%3D%2296%22%20width%3D%225%22%20height%3D%225%22%20fill%3D%22%238C8172%22/%3E%3Cpath%20d%3D%22M70%2063l9-4%22%20stroke%3D%22%23B25F4A%22%20stroke-width%3D%221.4%22/%3E%3C/svg%3E"><span>Chest of drawers</span></button>
+          <button type="button" class="sample" data-s="table"><img alt="" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22%23E3E8EA%22/%3E%3Crect%20y%3D%2298%22%20width%3D%22120%22%20height%3D%2222%22%20fill%3D%22%23C3CBCF%22/%3E%3Crect%20x%3D%2232%22%20y%3D%2248%22%20width%3D%2256%22%20height%3D%227%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%237D8A90%22%20stroke-width%3D%222%22/%3E%3Cg%20stroke%3D%22%237D8A90%22%20stroke-width%3D%224%22%20stroke-linecap%3D%22square%22%3E%3Cpath%20d%3D%22M37%2055v44M83%2055v44%22/%3E%3C/g%3E%3Crect%20x%3D%2236%22%20y%3D%2278%22%20width%3D%2248%22%20height%3D%224%22%20fill%3D%22%23FFFFFF%22%20stroke%3D%22%237D8A90%22%20stroke-width%3D%221.5%22/%3E%3C/svg%3E"><span>Side table</span></button>
+          <button type="button" class="sample" data-s="chair"><img alt="" src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%20120%20120%22%3E%3Crect%20width%3D%22120%22%20height%3D%22120%22%20fill%3D%22%23EAE6E1%22/%3E%3Crect%20y%3D%2298%22%20width%3D%22120%22%20height%3D%2222%22%20fill%3D%22%23CEC6BC%22/%3E%3Cpath%20d%3D%22M30%2040q0-14%2014-14h32q14%200%2014%2014v34H30z%22%20fill%3D%22%236F8C9B%22/%3E%3Crect%20x%3D%2220%22%20y%3D%2256%22%20width%3D%2216%22%20height%3D%2234%22%20rx%3D%227%22%20fill%3D%22%235E7A88%22/%3E%3Crect%20x%3D%2284%22%20y%3D%2256%22%20width%3D%2216%22%20height%3D%2234%22%20rx%3D%227%22%20fill%3D%22%235E7A88%22/%3E%3Crect%20x%3D%2234%22%20y%3D%2266%22%20width%3D%2252%22%20height%3D%2222%22%20rx%3D%225%22%20fill%3D%22%237E9BAA%22/%3E%3Cg%20stroke%3D%22%236B5A48%22%20stroke-width%3D%223%22%3E%3Cpath%20d%3D%22M28%2090l-3%2010M92%2090l3%2010%22/%3E%3C/g%3E%3Ccircle%20cx%3D%2252%22%20cy%3D%2276%22%20r%3D%224%22%20fill%3D%22%23A6A08F%22%20opacity%3D%22.7%22/%3E%3C/svg%3E"><span>Armchair</span></button>
+        </div>
+      </div>
+      <button class="ghost" id="goB">Book for a neighbour or a whole building</button>
+      <p class="tiny" style="margin-top:14px">Hard furniture only for now: shelving, wardrobes, tables, bed frames, drawers. One qualifying piece unlocks free collection of everything else flat-packable at the same address.</p>
+    </section>
+
+    <!-- B ASSISTED -->
+    <section class="pad hidden" id="sB">
+      <h2>Book on someone else&rsquo;s behalf</h2>
+      <p class="lead">No photos needed. The crew grades the piece at the door with the resident there, and the credit goes to whoever you name.</p>
+      <div class="field">
+        <label for="whoFor">Who is this for</label>
+        <select id="whoFor">
+          <option value="resident">A resident in my building</option>
+          <option value="relative">A relative or someone I care for</option>
+          <option value="building">Several households at once</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="districtB">District</label>
+        <select id="districtB">
+          <option value="Nantun">Nantun 南屯</option>
+          <option value="Xitun">Xitun 西屯</option>
+          <option value="Beitun">Beitun 北屯</option>
+          <option value="North">North 北區</option>
+          <option value="West">West 西區</option>
+          <option value="Central">Central 中區</option>
+          <option value="East">East 東區</option>
+          <option value="South" selected>South 南區</option>
+          <option value="Dali">Dali 大里</option>
+          <option value="Taiping">Taiping 太平</option>
+        </select>
+      </div>
+      <div class="field">
+        <label for="pieces">How many pieces in total</label>
+        <input type="number" id="pieces" min="1" max="40" step="1" value="3">
+      </div>
+      <label class="opt">
+        <span class="top"><span><input type="radio" name="lift" value="yes" checked><b>The building has a lift</b></span><span class="delta">standard</span></span>
+      </label>
+      <label class="opt">
+        <span class="top"><span><input type="radio" name="lift" value="no"><b>No lift, stairs only</b></span><span class="delta up">priority</span></span>
+        <span class="why">Our crew carries it down at no charge. The city&rsquo;s free collection requires the household to bring it to the kerb themselves, which is where that route stops working for a lot of people.</span>
+      </label>
+      <div class="flag"><b>Why this route exists</b>Grading by photo rules out anyone who does not use apps. A neighbour, a family member or the building committee can book instead, and nothing about the offer changes.</div>
+      <button class="primary" id="goB2">Request a pickup</button>
+      <button class="ghost" id="backB">Back</button>
+    </section>
+
+    <!-- C ASSISTED DONE -->
+    <section class="pad hidden" id="sC">
+      <div class="done">
+        <p class="tiny" style="margin:0 0 4px">Request received</p>
+        <div class="big" id="cPieces">-</div>
+        <p class="tiny" style="margin:4px 0 0">pieces queued for on-site grading</p>
+      </div>
+      <p class="tiny" style="margin-bottom:16px" id="cBody"></p>
+      <button class="primary" id="restartC">Back to start</button>
+    </section>
+
+    <!-- 2 THINKING -->
+    <section class="think hidden" id="s2">
+      <p style="margin-bottom:12px"><span class="dot"></span><span class="dot"></span><span class="dot"></span></p>
+      <p class="lead" id="thinkMsg" style="margin:0">Reading the photos&hellip;</p>
+    </section>
+
+    <!-- 3 OFFER -->
+    <section class="pad hidden" id="s3">
+      <h2 id="itemName">-</h2>
+      <p class="lead" id="itemMeta" style="margin-bottom:16px">-</p>
+      <div class="grade" id="gradeBox">
+        <div class="letter" id="gradeLetter">B</div>
+        <div><b id="gradeName">Used, complete</b><span id="gradeFactor"></span></div>
+      </div>
+      <div class="match hidden" id="matchBox">
+        <p class="mk" id="matchK">We think this is</p>
+        <b id="matchName"></b>
+        <span id="matchMeta"></span>
+        <label for="matchSel" id="matchSelL">Not right? Choose the product</label>
+        <select id="matchSel"></select>
+      </div>
+      <ul class="checks" id="checksList"></ul>
+      <ul class="notes" id="notes"></ul>
+      <div class="flag hidden" id="flag"></div>
+      <div class="field" id="priceField">
+        <label for="price">Original price in NT$, change it if you paid a different price</label>
+        <input type="number" id="price" min="0" step="100">
+      </div>
+      <div class="money" id="offerMoney"></div>
+      <button class="primary" id="go3">Choose a pickup slot</button>
+      <button class="ghost" id="back3">Start over</button>
+    </section>
+
+    <!-- 4 SLOT -->
+    <section class="pad hidden" id="s4">
+      <h2>Pick your slot</h2>
+      <p class="lead">The later in the round the van reaches you, the cheaper the ride is for us. We pass that back.</p>
+      <div class="field">
+        <label for="district">Your district</label>
+        <select id="district">
+          <option value="Nantun">Nantun 南屯</option>
+          <option value="Xitun" selected>Xitun 西屯</option>
+          <option value="Beitun">Beitun 北屯</option>
+          <option value="North">North 北區</option>
+          <option value="West">West 西區</option>
+          <option value="Central">Central 中區</option>
+          <option value="East">East 東區</option>
+          <option value="South">South 南區</option>
+          <option value="Dali">Dali 大里</option>
+          <option value="Taiping">Taiping 太平</option>
+        </select>
+      </div>
+      <div class="field">
+        <label id="daysLbl">Pickup day</label>
+        <div class="days" id="days" role="group" aria-labelledby="daysLbl"></div>
+        <p class="tiny" id="dayNote" style="margin:6px 0 0"></p>
+      </div>
+      <label class="opt">
+        <span class="top"><span><input type="radio" name="win" value="early"><b>Morning, 9:00-12:00</b></span><span class="delta">+0</span></span>
+        <span class="why">The van is still full of new goods, so we have to make room for you.</span>
+      </label>
+      <label class="opt">
+        <span class="top"><span><input type="radio" name="win" value="mid"><b>Midday, 12:00-15:00</b></span><span class="delta up">+25</span></span>
+        <span class="why">Part of the van is already empty.</span>
+      </label>
+      <label class="opt">
+        <span class="top"><span><input type="radio" name="win" value="late" checked><b>Afternoon, 15:00-19:00, or any time that day</b></span><span class="delta up">+50</span></span>
+        <span class="why">We reach you on the way back, when the van is nearly empty.</span>
+      </label>
+      <label class="opt">
+        <span class="top"><span><input type="checkbox" id="family" checked><b>I am an IKEA Family member</b></span><span class="delta up">+15 %</span></span>
+        <span class="why">The same uplift IKEA Buyback already gives members.</span>
+      </label>
+      <label class="opt">
+        <span class="top"><span><input type="checkbox" id="dis" checked><b>I will take it apart and stack it flat</b></span><span class="delta up">+150</span></span>
+        <span class="why">Cuts our time on site and the space it takes in the van. Our single biggest saving, so it pays the most.</span>
+      </label>
+      <label class="opt">
+        <span class="top"><span><input type="checkbox" id="inside"><b>Carry it out of my apartment</b></span><span class="delta down">&minus;150</span></span>
+        <span class="why">Leave it at the loading bay or ground floor instead and keep the full amount.</span>
+      </label>
+      <div class="flag"><b>Neighbour bonus, +75</b>Credited afterwards if two more pickups in your building land in the same slot. After booking you can send them an invite for the same slot, and all three of you get it.</div>
+
+      <h2 style="font-size:18px;margin:24px 0 6px">Anything else in the room?</h2>
+      <p class="lead" style="font-size:14px">One paid piece unlocks the rest. We take any other flat-pack IKEA furniture from the same address in the same slot, at no charge. Those pieces earn no credit and go straight to the Circular Hub.</p>
+      <div class="field">
+        <label for="extras">How many other pieces should we take</label>
+        <select id="extras">
+          <option value="0">None, just this one</option>
+          <option value="1">1 more</option>
+          <option value="2" selected>2 more</option>
+          <option value="3">3 more</option>
+          <option value="4">4 more</option>
+          <option value="5">5 more</option>
+        </select>
+      </div>
+      <div class="money" id="slotMoney"></div>
+      <button class="primary" id="go4">Book this pickup</button>
+      <button class="ghost" id="back4">Back</button>
+    </section>
+
+    <!-- 5 DONE -->
+    <section class="pad hidden" id="s5">
+      <div class="done">
+        <p class="tiny" style="margin:0 0 4px">Booked. Credit is issued at the door.</p>
+        <div class="big" id="doneAmount">-</div>
+        <p class="tiny" style="margin:4px 0 0">IKEA store credit</p>
+      </div>
+      <div class="when"><span>Pickup</span><b id="doneWhen">-</b></div>
+      <div class="impact">
+        <div><b id="impKg">-</b><span>kg kept in use</span></div>
+        <div><b id="impCo2">-</b><span>kg CO&#8322;e avoided</span></div>
+      </div>
+      <p class="tiny hidden" id="extraLine" style="margin-bottom:14px"></p>
+      <h2 style="font-size:16px;margin:4px 0 12px">What happens next</h2>
+      <ol class="steps">
+        <li class="on"><b>Booked</b>Your slot sits on a delivery round that already passes your street.</li>
+        <li><b>Reminder the evening before</b>Take it apart, stack it flat, leave it at the loading bay or ground floor.</li>
+        <li><b>Collected on the return leg</b>The crew checks the grade at the door and issues the credit there. If the piece is in worse shape than the photos showed, you decide on the spot and nothing is charged either way.</li>
+        <li><b>Refurbished at IKEA Taichung</b>In the store&rsquo;s existing lower-level warehouse.</li>
+        <li><b>Back on sale in the Circular Hub</b>We let you know when it finds its next home.</li>
+      </ol>
+      <button class="ghost" id="inviteBtn" style="margin:0 0 4px">Invite neighbours to the same slot, +75 each</button>
+      <p class="invite hidden" id="inviteText"></p>
+      <div style="height:14px"></div>
+      <button class="primary" id="restart">Book another piece</button>
+    </section>
+
+    <div class="foot">
+      <p class="tiny" id="footNote" style="margin:0"></p>
+    </div>
+  </div>
+
+  <div class="legal">
+    <p class="tiny">Prototype for the 2026 Sustainability Hackathon, built for the IKEA challenge. Offer rules: we pay IKEA's published Buyback rates of 45 / 35 / 25 % of the original price for grades A / B / C, plus the standard 15 % IKEA Family uplift. Unlike Buyback we collect, and unlike Buyback we want the piece taken apart. Minimum original price of NT$3,700 / 4,500 / 8,700 by grade, set so that every piece at the minimum still pays even when collected alone, with every bonus and the IKEA Family uplift included. Pieces collected alongside a paid one carry no credit and need only have cost about NT$1,000 new, because they skip refurbishment and go to the Circular Hub as they are. Bonuses are flat amounts, because the savings they create are measured in crew minutes and load metres, not in the value of the piece. Upholstery, mattresses, rugs, electricals and lighting are out of phase one. Product list and original prices: current prices on ikea.com.tw, accessed 7 November 2026, used as a stand-in for the price the customer paid.</p>
+    <p class="tiny">Impact is reported at 3.62 kg CO&#8322;e per kg: 3.9 kg avoided less 0.28 kg to run the programme, both from published research on a municipal reuse scheme. That research also finds rebound effects of 82 to 167 % for furniture, driven by how people re-spend the money. We pay in store credit rather than cash precisely because it makes that re-spending visible and steerable instead of unknown. The figure shown is therefore avoided emissions net of operations, not a rebound-adjusted net effect, and we do not claim it as one.</p>
+  </div>
+</div>
+
+<section id="vOps" class="ops" hidden>
+  <header class="ops-head">
+    <div>
+      <p class="eyebrow">Internal IKEA tool, not shown to customers · IKEA Taichung logistics · Delivery round TC-07</p>
+      <h1 id="opsTitle">This van leaves 92 % full and drives home empty.</h1>
+      <p class="lead">Every pickup booked in the app lands here. The planner places it where the van already has room, which is almost always late in the round. Collection costs only what the stop adds, because the trip happens anyway.</p>
+    </div>
+    <div class="ops-actions">
+      <button class="primary" id="autoPlan">Plan all pickups</button>
+      <button class="ghost" id="resetPlan">Reset</button>
+    </div>
+  </header>
+
+  <div class="kpis">
+    <div class="kpi"><div class="k">Pieces on the return leg</div><div class="v" id="kOn">0</div><div class="u" id="kOnU">-</div></div>
+    <div class="kpi hl"><div class="k">Collection cost per piece</div><div class="v" id="kCost">-</div><div class="u" id="kCostU">-</div></div>
+    <div class="kpi"><div class="k">Contribution, this round</div><div class="v" id="kDb">-</div><div class="u" id="kDbU">-</div></div>
+    <div class="kpi"><div class="k">App grade vs door grade</div><div class="v" id="kAgr">-</div><div class="u" id="kAgrU">no door checks yet</div></div>
+    <div class="kpi"><div class="k">Declined at the door</div><div class="v" id="kRej">-</div><div class="u" id="kRejU">target under 8 %</div></div>
+    <div class="kpi"><div class="k">Diverted from disposal</div><div class="v" id="kKg">0 kg</div><div class="u" id="kKgU">-</div></div>
+  </div>
+
+  <div class="ops-grid">
+    <div class="card">
+      <h3>Delivery round TC-07</h3>
+      <p class="hint">Schematic map of Taichung, not to scale. Dashed squares are pickups still waiting.</p>
+      <svg class="map" id="map" viewBox="95 25 520 440" role="img" aria-label="Delivery route with collection stops"></svg>
+      <div class="legend">
+        <span><i style="background:var(--blue)"></i>Delivery stop</span>
+        <span><i style="background:var(--yellow);border:1px solid var(--ink)"></i>Pickup on the round</span>
+        <span><i style="border:1px dashed var(--ink)"></i>Waiting</span>
+      </div>
+    </div>
+    <div class="card">
+      <h3>Van load after each stop</h3>
+      <p class="hint">New goods go out, used furniture comes in. Pickups fill capacity that is paid for either way.</p>
+      <div class="load" id="load"><div class="cap"><em>van full</em></div></div>
+      <div class="loadx" id="loadx"></div>
+      <div class="legend">
+        <span><i style="background:var(--blue)"></i>New goods still to deliver</span>
+        <span><i style="background:var(--yellow)"></i>Pickups on board</span>
+      </div>
+    </div>
+  </div>
+
+  <div class="card" style="margin-bottom:14px">
+    <h3>Pickup queue</h3>
+    <p class="hint">P1 to P4 are demo bookings. Anything booked in the customer app appears here live.</p>
+    <div class="scroll"><table class="q">
+      <thead><tr><th>ID</th><th>Collection stop</th><th>District</th><th>Grade</th><th>Pieces</th><th>Credit</th><th>Contribution</th><th>Plan</th></tr></thead>
+      <tbody id="qBody"></tbody>
+    </table></div>
+  </div>
+
+  <div class="card cmp" style="margin-bottom:18px">
+    <h3>Same pickups. Only the vehicle differs.</h3>
+    <p class="hint">All planned pickups, in NT$. Every assumption below is a slider: test us.</p>
+    <div class="row"><span>Collection, return leg</span><div class="t"><span id="bBack" style="background:var(--blue)"></span></div><span class="v" id="vBack">0</span></div>
+    <div class="row"><span>Collection, dedicated runs</span><div class="t"><span id="bDed" style="background:var(--red)"></span></div><span class="v" id="vDed">0</span></div>
+    <div class="row" style="margin-top:14px"><span>Contribution, return leg</span><div class="t"><span id="bDbB" style="background:var(--green)"></span></div><span class="v" id="vDbB">0</span></div>
+    <div class="row"><span>Contribution, dedicated runs</span><div class="t"><span id="bDbD" style="background:var(--red)"></span></div><span class="v" id="vDbD">0</span></div>
+    <p class="tiny" id="kmLine" style="margin:6px 0 16px"></p>
+    <div class="sl">
+      <label for="sCrew">Crew rate, two people <output id="oCrew"></output></label>
+      <input type="range" id="sCrew" min="400" max="1600" step="50" value="800">
+      <label for="sInc">Crew bonus per extra piece loaded, at most three a stop (proposal: NT$50) <output id="oInc"></output></label>
+      <input type="range" id="sInc" min="0" max="180" step="10" value="50">
+      <label for="sMargin">Gross margin on the follow-up purchase <output id="oMargin"></output></label>
+      <input type="range" id="sMargin" min="20" max="60" step="1" value="40">
+    </div>
+  </div>
+
+  <p class="tiny">Same cost model as our proposal and tour simulator. Stated assumptions, none from IKEA: two-person crew NT$800 per hour, 8 minutes set-up per stop shared by all pieces there, 6 minutes per disassembled and 18 per assembled piece, NT$12 per vehicle km, NT$120 hub handling and grading per paid piece. Resale at 50 / 40 / 25 percent of original price for grades A / B / C, as in our break-even calculation, refurbishment NT$350, credit at IKEA Buyback rates costing (1 - 8 % unredeemed) x (1 - gross margin) of face value. Free extra pieces assumed at NT$1,500 new, resold as-is at 25 percent, NT$50 cleaning and NT$60 handling. Van capacity 6.0 loading metres (ldm), 0.25 per flat-packed and 0.9 per assembled piece; space used early in the round is charged at NT$150 per ldm, falling to zero as the van empties. A dedicated run is costed at 35 minutes and 14 km. Crew time is paid in full at the crew rate. On top, the crew bonus our proposal suggests, NT$50 for every extra piece loaded and at most three per stop (28 % of the NT$179 an extra piece adds), is included in every figure here and is a slider. Unknown grades on assisted bookings are estimated as grade B at NT$4,500. Credits include the slot, disassembly and neighbour bonuses. The planner uses cheapest insertion under the capacity limit. Phase one dispatches manually; this view is the phase-two tool for live tour-position pricing.</p>
+</section>
+
+<div class="shell" id="vCrew" hidden>
+  <div class="app">
+    <div class="brand crewbar">
+      <div><b id="cwTitle">Crew · Round TC-07</b><span id="cwSub">IKEA Taichung · two-person crew</span></div>
+    </div>
+
+    <section class="pad" id="cwList">
+      <h2 id="cwListH">Today&rsquo;s round</h2>
+      <p class="lead" id="cwSummary"></p>
+      <div class="flag hidden" id="cwEmpty"></div>
+      <ol class="route" id="cwRoute"></ol>
+    </section>
+
+    <section class="pad hidden" id="cwDoor">
+      <p class="eyebrow" id="cwDoorMeta"></p>
+      <h2 id="cwDoorName"></h2>
+      <div class="booked" id="cwBooked"></div>
+
+      <h3 class="sub" id="cwCheckH">Check at the door</h3>
+      <div id="cwChecks"></div>
+      <p class="tiny hidden" id="cwCheckHint"></p>
+
+      <h3 class="sub" id="cwGradeH">Grade at the door</h3>
+      <div class="gbtns" id="cwGrades" role="group" aria-labelledby="cwGradeH"></div>
+      <p class="tiny" id="cwGradeName" style="margin:6px 0 14px"></p>
+
+      <div class="field" id="cwPriceF">
+        <label for="cwPrice" id="cwPriceL">Original price per piece, NT$</label>
+        <input type="number" id="cwPrice" min="0" step="100">
+      </div>
+
+      <label class="opt hidden" id="cwApartO">
+        <span class="top"><span><input type="checkbox" id="cwApart" checked><b id="cwApartB">Taken apart as booked</b></span><span class="delta" id="cwApartD"></span></span>
+      </label>
+
+      <div class="field">
+        <label id="cwExtraL">Anything else the household wants gone? Free, no credit</label>
+        <div class="stepper"><button type="button" id="cwMinus" aria-label="One fewer">&minus;</button><output id="cwExtras">0</output><button type="button" id="cwPlus" aria-label="One more">+</button></div>
+      </div>
+
+      <div class="money" id="cwMoney"></div>
+      <div class="flag hidden" id="cwFlag"></div>
+      <p class="tiny" id="cwRoom" style="margin:-6px 0 14px"></p>
+      <button class="primary" id="cwAccept">Customer accepts, issue credit</button>
+      <button class="ghost" id="cwDecline">Customer declines</button>
+      <button class="ghost" id="cwBack">Back to the round</button>
+    </section>
+
+    <section class="pad hidden" id="cwDone">
+      <div class="done" id="cwDoneBox">
+        <p class="tiny" id="cwDoneK" style="margin:0 0 4px"></p>
+        <div class="big" id="cwDoneV"></div>
+        <p class="tiny" id="cwDoneU" style="margin:4px 0 0"></p>
+      </div>
+      <p class="tiny" id="cwDoneText" style="margin-bottom:16px"></p>
+      <button class="primary" id="cwNext">Next stop</button>
+    </section>
+
+    <div class="foot"><p class="tiny" id="cwFoot" style="margin:0">Your door results are sent to IKEA dispatch automatically.</p></div>
+  </div>
+</div>
+
+
+<script>
+(function(){
+  const CAP = 6.0;
+  const K = {setup:8, tFlat:6, tAsm:18, km:12, ldmCost:150, hub:120, dedMin:35, dedKm:14, kmPerUnit:0.045,
+             resale:{A:0.50, B:0.40, C:0.25}, refurb:350, unredeemed:0.08, xNew:1500, xResale:0.25, xClean:50, xHandle:60, co2:3.62};
+  const RATE = {A:0.45, B:0.35, C:0.25};
+  const S = {crew:800, margin:0.40, incentive:50};
+  const STORE = {x:200, y:352};
+  const DIST = {Nantun:[258,336],Xitun:[200,170],Beitun:[452,118],North:[352,166],West:[292,240],Central:[360,250],East:[420,268],South:[338,318],Dali:[410,398],Taiping:[520,262]};
+  const LABELS = [["Xitun 西屯",150,128],["Beitun 北屯",470,95],["North 北區",330,145],["West 西區",255,228],["Central 中區",378,222],["East 東區",440,300],["South 南區",350,350],["Nantun 南屯",270,392],["Dali 大里",420,435],["Taiping 太平",530,230],["Daya 大雅",275,48]];
+  const DELIV = [
+    {id:1,x:262,y:300,ldm:1.0,d:"Nantun"},{id:2,x:300,y:262,ldm:0.6,d:"West"},{id:3,x:350,y:232,ldm:0.5,d:"Central"},{id:4,x:332,y:182,ldm:0.8,d:"North"},
+    {id:5,x:428,y:136,ldm:0.9,d:"Beitun"},{id:6,x:474,y:182,ldm:0.4,d:"Beitun"},{id:7,x:252,y:160,ldm:0.7,d:"Xitun"},{id:8,x:178,y:206,ldm:0.6,d:"Xitun"}
+  ];
+  const TOTAL = DELIV.reduce((a,d)=>a+d.ldm,0);
+  let n = 0;
+  const P = [];
+  const ldmOf = p => p.paid*(p.flat?0.25:0.9) + p.extras*0.25;
+  function mk(o){
+    n++;
+    const p = Object.assign({id:"P"+n, paid:1, extras:0, flat:true, plan:null, nofit:false, isNew:false, est:false}, o);
+    p.ldm = Math.round(ldmOf(p)*100)/100;
+    P.push(p); return p;
+  }
+  function seed(){
+    P.length = 0; n = 0;
+    mk({name:"Chest of drawers, three households", name_zh:"抽屜櫃，三戶合併", note_zh:"鄰居合併預約", d:"Beitun", x:496, y:204, grade:"B", paid:3, price:4999, credit:6074, bonus:825, disBonus:450, kg:150, src:"App", note:"neighbour bundle"});
+    mk({name:"Wardrobe, plus 2 free pieces", name_zh:"衣櫃，另加 2 件免費", d:"Xitun", x:166, y:196, grade:"A", paid:1, extras:2, price:6000, credit:2900, bonus:200, disBonus:150, kg:75, src:"App"});
+    mk({name:"Bed frame, left assembled", name_zh:"床架（未拆解）", d:"North", x:344, y:170, grade:"C", paid:1, flat:false, price:9990, credit:2548, bonus:50, disBonus:0, kg:60, src:"App"});
+    mk({name:"Building pickup, three households", name_zh:"整棟大樓收取，三戶", note_zh:"只有樓梯", d:"South", x:338, y:322, grade:null, est:true, paid:3, price:4500, credit:5550, bonus:825, disBonus:450, kg:90, src:"Assisted", note:"stairs only"});
+  }
+  let seq;
+  function baseSeq(){ seq = [{t:"s",r:STORE}].concat(DELIV.map(d=>({t:"d",r:d})), [{t:"s",r:STORE}]); }
+
+  const el = id => document.getElementById(id);
+  const fmt = v => new Intl.NumberFormat("en-US",{maximumFractionDigits:0}).format(Math.round(v));
+  const sgn = v => (v < 0 ? "−" : "+") + fmt(Math.abs(v));
+  const fmt1 = v => new Intl.NumberFormat("en-US",{maximumFractionDigits:1,minimumFractionDigits:1}).format(v);
+  const dist = (a,b) => Math.hypot(a.x-b.x, a.y-b.y) * K.kmPerUnit;
+  const routeLen = s => s.slice(1).reduce((a,node,i)=>a+dist(s[i].r,node.r),0);
+  const BASE_KM = (()=>{ baseSeq(); return routeLen(seq); })();
+
+  function loads(s){
+    let l = TOTAL, done = 0; const out = [];
+    s.forEach(node => {
+      if(node.t==="d"){ l -= node.r.ldm; done += node.r.ldm; }
+      if(node.t==="p" && node.r.status !== "declined"){ l += node.r.ldm; }
+      out.push({load:l, newLeft:TOTAL-done, done});
+    });
+    return out;
+  }
+  const pieces = p => p.paid + p.extras;
+  const crewBonus = p => Math.min(p.extras, 3) * S.incentive;
+  const tItem = p => p.flat ? K.tFlat : K.tAsm;
+  function collect(p, detour, frac){
+    const shared = (K.setup/60)*S.crew + detour*K.km;
+    const paid = p.paid * ((tItem(p)/60)*S.crew + (p.flat?0.25:0.9)*K.ldmCost*(1-frac) + K.hub);
+    const extra = p.extras * ((K.tFlat/60)*S.crew + 0.25*K.ldmCost*(1-frac)) + crewBonus(p);
+    return shared + paid + extra;
+  }
+  function dedicated(p){
+    return ((K.dedMin + K.setup + p.paid*tItem(p) + p.extras*K.tFlat)/60)*S.crew + K.dedKm*K.km + K.hub*p.paid + crewBonus(p);
+  }
+  function contribution(p, coll){
+    const resale = p.paid*(K.resale[p.grade] ?? K.resale.B)*p.price + p.extras*K.xResale*K.xNew;
+    const refurb = p.paid*K.refurb + p.extras*(K.xClean + K.xHandle);
+    const credit = p.credit*(1-K.unredeemed)*(1-S.margin);
+    return resale - refurb - credit - coll;
+  }
+
+  function best(p){
+    const L = loads(seq); let b = null;
+    for(let k=0;k<seq.length-1;k++){
+      let peak = 0; for(let j=k;j<seq.length-1;j++) peak = Math.max(peak, L[j].load);
+      if(peak + p.ldm > CAP + 1e-9) continue;
+      const a = seq[k].r, c = seq[k+1].r;
+      const detour = Math.max(0, dist(a,p) + dist(p,c) - dist(a,c));
+      const frac = L[k].done / TOTAL;
+      const cost = collect(p, detour, frac);
+      if(!b || cost < b.cost) b = {k, cost, detour, frac, after: seq.slice(0,k+1).filter(x=>x.t==="d").length};
+    }
+    return b;
+  }
+  function insert(p){
+    const b = best(p);
+    if(!b){ p.nofit = true; return false; }
+    seq.splice(b.k+1, 0, {t:"p", r:p});
+    p.plan = {detour:b.detour, frac:b.frac, after:b.after}; p.nofit = false; return true;
+  }
+  function autoPlan(){
+    let open = P.filter(p=>!p.plan && !p.nofit);
+    while(open.length){
+      let pick = null, pb = null;
+      open.forEach(p => { const b = best(p); if(b && (!pb || b.cost < pb.cost)){ pick = p; pb = b; } });
+      if(!pick){ open.forEach(p=>p.nofit=true); break; }
+      insert(pick);
+      open = P.filter(p=>!p.plan && !p.nofit);
+    }
+    render();
+  }
+  function reset(){ baseSeq(); P.forEach(p=>{ if(p.orig) Object.assign(p, p.orig); p.orig=null; delete p.appGrade; delete p.doorGrade; p.credit0=undefined; p.status=null; p.plan=null; p.nofit=false; }); render(); }
+  const slot = f => f < 0.34 ? "early slot" : f < 0.67 ? "mid slot" : "late slot";
+
+  function drawMap(){
+    let h = "";
+    h += '<path class="road" d="M110,96 L560,360"/><path class="road" d="M120,330 L560,150"/><path class="road" d="M330,30 L360,450"/>';
+    LABELS.forEach(([t,x,y]) => h += '<text class="dist" x="'+x+'" y="'+y+'">'+t+'</text>');
+    h += '<path class="route" d="M'+seq.map(s=>s.r.x+","+s.r.y).join(" L")+'"/>';
+    DELIV.forEach(d => h += '<g class="stop"><circle cx="'+d.x+'" cy="'+d.y+'" r="10"/><text x="'+d.x+'" y="'+d.y+'">'+d.id+'</text></g>');
+    P.forEach(p => h += '<g class="pk'+(p.plan?' on':'')+(p.isNew?' new':'')+'"><rect x="'+(p.x-11)+'" y="'+(p.y-9)+'" width="22" height="18" rx="3"/><text x="'+p.x+'" y="'+p.y+'">'+p.id+'</text></g>');
+    h += '<g class="store"><rect x="'+(STORE.x-24)+'" y="'+(STORE.y-11)+'" width="48" height="22" rx="4"/><text x="'+STORE.x+'" y="'+STORE.y+'">IKEA</text></g>';
+    el("map").innerHTML = h;
+  }
+
+  function drawLoad(){
+    const L = loads(seq), box = el("load"), xs = el("loadx");
+    box.querySelectorAll(".col").forEach(c=>c.remove()); xs.textContent = "";
+    for(let k=0;k<seq.length-1;k++){
+      const col = document.createElement("div"); col.className = "col";
+      const pk = Math.max(0, L[k].load - L[k].newLeft);
+      const sp = document.createElement("span"); sp.className = "p"; sp.style.height = (pk/CAP*100)+"%";
+      const sn = document.createElement("span"); sn.className = "n"; sn.style.height = (L[k].newLeft/CAP*100)+"%";
+      col.title = fmt(L[k].load/CAP*100) + " % full";
+      col.append(sp, sn); box.appendChild(col);
+      const lab = document.createElement("span");
+      const node = seq[k];
+      lab.textContent = node.t==="s" ? "Out" : node.r.id;
+      if(node.t==="p") lab.className = "p";
+      xs.appendChild(lab);
+    }
+  }
+
+  function drawTable(){
+    const tb = el("qBody"); tb.textContent = "";
+    P.forEach(p => {
+      const tr = document.createElement("tr"); if(p.isNew) tr.className = "new";
+      const td = t => { const c = document.createElement("td"); if(t!==undefined) c.textContent = t; tr.appendChild(c); return c; };
+      td(p.id);
+      const ni = td(p.name); if(p.isNew){ const tg = document.createElement("span"); tg.className="tag"; tg.textContent="just booked"; ni.appendChild(tg); }
+      const sub = [p.src, p.note].filter(Boolean).join(" · ");
+      if(sub){ const nn = document.createElement("div"); nn.className="placed"; nn.textContent = sub; ni.appendChild(nn); }
+      td(p.d);
+      const g = td(); const gs = document.createElement("span"); gs.className = "gr"+(p.grade?"":" na"); gs.textContent = p.grade || "?"; gs.title = p.grade ? "Graded from photos" : "Graded at the door, estimated as B"; g.appendChild(gs);
+      td(p.paid + (p.extras ? " + "+p.extras+" free" : "") + " · " + (p.flat ? "flat" : "assembled")).className = "n";
+      td((p.est ? "est. " : "") + "NT$ "+fmt(p.credit)).className = "n";
+      const cc = td(); cc.className = "n";
+      if(p.plan){ const v = p.status === "declined" ? -wasted(p) : contribution(p, collect(p, p.plan.detour, p.plan.frac)); cc.textContent = sgn(v); cc.style.color = v < 0 ? "var(--red)" : "var(--green)"; cc.style.fontWeight = "700"; }
+      else { cc.textContent = "-"; }
+      const c = td();
+      if(p.plan){
+        const s = document.createElement("span"); s.className = "placed";
+        const b = document.createElement("b"); b.textContent = p.status === "collected" ? "Collected, grade "+p.grade+" at the door" : p.status === "declined" ? "Declined at the door" : "After stop "+p.plan.after;
+        if(p.status === "declined"){ b.style.color = "var(--red)"; b.title = "Wasted stop: about NT$ "+fmt(wasted(p))+" on the return leg, against about NT$ "+fmt(dedWasted())+" on a dedicated run"; }
+        s.append(b, document.createTextNode(p.status ? " · after stop "+p.plan.after : " · "+slot(p.plan.frac)+" · +"+fmt1(p.plan.detour)+" km"));
+        c.appendChild(s);
+      } else if(p.nofit){
+        const s = document.createElement("span"); s.className = "nofit"; s.textContent = "No room on this round, offered the next one"; c.appendChild(s);
+      } else {
+        const btn = document.createElement("button"); btn.type="button"; btn.textContent = "Insert";
+        btn.addEventListener("click", () => { insert(p); render(); });
+        c.appendChild(btn);
+      }
+      tb.appendChild(tr);
+    });
+  }
+
+  function bar(id, v, mx){ el(id).style.width = (Math.abs(v)/mx*100)+"%"; }
+
+  function drawKpis(){
+    const on = P.filter(p=>p.plan);
+    const pcs = on.filter(p=>p.status!=="declined").reduce((a,p)=>a+pieces(p),0);
+    let back = 0, ded = 0, dbB = 0, dbD = 0, kg = 0;
+    on.forEach(p => {
+      if(p.status === "declined"){ const w = wasted(p), wd = dedWasted(); back += w; ded += wd; dbB -= w; dbD -= wd; return; }
+      const cb = collect(p, p.plan.detour, p.plan.frac), cd = dedicated(p);
+      back += cb; ded += cd; dbB += contribution(p, cb); dbD += contribution(p, cd); kg += p.kg;
+    });
+    const waiting = P.filter(p=>!p.plan && !p.nofit).length;
+    el("kOn").textContent = pcs;
+    el("kOnU").textContent = on.length+" collection stop"+(on.length===1?"":"s")+(waiting ? " · "+waiting+" waiting" : "");
+    el("kCost").textContent = pcs ? "NT$ "+fmt(back/pcs) : "-";
+    el("kCostU").textContent = pcs ? "vs NT$ "+fmt(ded/pcs)+" on a dedicated run" : "plan a pickup to see it";
+    const kd = el("kDb");
+    kd.textContent = on.length ? "NT$ "+sgn(dbB) : "-";
+    kd.style.color = !on.length ? "" : dbB < 0 ? "var(--red)" : "var(--green)";
+    el("kDbU").textContent = on.length ? "vs NT$ "+sgn(dbD)+" on dedicated runs" : "-";
+    el("kKg").textContent = fmt(kg)+" kg";
+    const doorDone = on.filter(p=>p.status), rej = doorDone.filter(p=>p.status==="declined").length;
+    el("kRej").textContent = doorDone.length ? rej+" of "+doorDone.length : "-";
+    el("kRej").style.color = doorDone.length && rej/doorDone.length > 0.08 ? "var(--red)" : "";
+    const cmp = doorDone.filter(p=>p.appGrade && p.doorGrade);
+    const gi = g => "ABCD".indexOf(g);
+    const exact = cmp.filter(p=>p.appGrade===p.doorGrade).length, near = cmp.filter(p=>Math.abs(gi(p.appGrade)-gi(p.doorGrade))<=1).length;
+    el("kAgr").textContent = cmp.length ? exact+" of "+cmp.length : "-";
+    el("kAgrU").textContent = cmp.length ? "same grade · "+near+" of "+cmp.length+" within one grade" : "measured at every door check";
+    const wastedSum = doorDone.filter(p=>p.status==="declined").reduce((a,p)=>a+wasted(p),0);
+    el("kRejU").textContent = doorDone.length ? fmt(rej/doorDone.length*100)+" % · target under 8 %" + (rej ? " · wasted stops NT$ "+fmt(wastedSum)+" (dedicated: NT$ "+fmt(rej*dedWasted())+")" : "") : "no door checks yet · target under 8 %";
+    el("kKgU").textContent = kg ? fmt(kg*K.co2)+" kg CO₂e avoided, net of operations" : "-";
+
+    const mx = Math.max(back, ded, 1);
+    bar("bBack", back, mx); el("vBack").textContent = fmt(back);
+    bar("bDed", ded, mx); el("vDed").textContent = fmt(ded);
+    const mx2 = Math.max(Math.abs(dbB), Math.abs(dbD), 1);
+    bar("bDbB", dbB, mx2); el("bDbB").style.background = dbB < 0 ? "var(--red)" : "var(--green)"; el("vDbB").textContent = sgn(dbB);
+    bar("bDbD", dbD, mx2); el("bDbD").style.background = dbD < 0 ? "var(--red)" : "var(--green)"; el("vDbD").textContent = sgn(dbD);
+    el("kmLine").textContent = on.length ? "Extra distance: +"+fmt1(routeLen(seq)-BASE_KM)+" km on this round, against "+fmt(on.length*K.dedKm)+" km for "+on.length+" dedicated run"+(on.length===1?"":"s")+"." : "";
+
+    el("opsTitle").textContent = on.length
+      ? pcs+" piece"+(pcs===1?"":"s")+" ride home in space that would have stayed empty."
+      : "This van leaves "+fmt(TOTAL/CAP*100)+" % full and drives home empty.";
+    el("opsBadge").textContent = waiting ? waiting : "";
+    el("oCrew").textContent = "NT$ "+fmt(S.crew)+" / h";
+    el("oMargin").textContent = Math.round(S.margin*100)+" %";
+    el("oInc").textContent = "NT$ "+fmt(S.incentive);
+  }
+
+  function render(){ drawMap(); drawLoad(); drawTable(); drawKpis(); drawCrew(); }
+
+  function show(v){
+    el("vOps").hidden = v !== "ops"; el("vCustomer").hidden = v !== "customer"; el("vCrew").hidden = v !== "crew";
+    el("tabO").setAttribute("aria-pressed", v === "ops"); el("tabC").setAttribute("aria-pressed", v === "customer"); el("tabW").setAttribute("aria-pressed", v === "crew");
+    if(v === "crew"){ drawCrew(); crewShow("cwList"); }
+    window.scrollTo({top:0});
+  }
+
+  function placeIn(d){
+    const near = DELIV.filter(x=>x.d===d);
+    const jx = (Math.random()<0.5?-1:1)*(10+Math.random()*6), jy = (Math.random()*2-1)*10;
+    if(near.length){ const s = near[Math.floor(Math.random()*near.length)]; return {x:Math.round(s.x+jx), y:Math.round(s.y+jy)}; }
+    const c = DIST[d] || DIST.Xitun; return {x:Math.round(c[0]+jx), y:Math.round(c[1]+jy)};
+  }
+
+  window.OPS = {
+    add(o){
+      P.forEach(p=>p.isNew=false);
+      const p = mk(Object.assign(placeIn(o.d), {isNew:true}, o));
+      render(); return p.id;
+    },
+    show
+  };
+
+  el("tabC").addEventListener("click", ()=>show("customer"));
+  el("tabO").addEventListener("click", ()=>show("ops"));
+  el("tabW").addEventListener("click", ()=>show("crew"));
+  el("autoPlan").addEventListener("click", autoPlan);
+  el("resetPlan").addEventListener("click", reset);
+  el("sCrew").addEventListener("input", e => { S.crew = +e.target.value; render(); });
+  el("sInc").addEventListener("input", e => { S.incentive = +e.target.value; render(); });
+  el("sMargin").addEventListener("input", e => { S.margin = +e.target.value/100; render(); });
+
+
+  /* ---------- crew view ---------- */
+  const T = (k, v) => window.I18N ? I18N.t(k, v) : k;
+  const MIN = {A:3700, B:4500, C:8700};
+  const RATE_D = {A:0.45, B:0.35, C:0.25, D:0};
+  let cur = null, door = null;
+  const isZh = () => window.I18N && I18N.lang === "zh";
+  const pName = p => (isZh() && p.name_zh) || p.name;
+  const pNote = p => (isZh() ? (p.note_zh ?? p.note) : p.note) || null;
+  const pcsTxt = (paid, extras) => isZh() ? paid + " 件" + (extras ? " + " + extras + " 件免費" : "") : paid + (extras ? " + " + extras + " free" : "") + " pcs";
+  const wasted = p => (K.setup/60)*S.crew + (p.plan ? p.plan.detour : 0)*K.km;
+  const dedWasted = () => ((K.dedMin + K.setup)/60)*S.crew + K.dedKm*K.km;
+
+  function crewShow(id){
+    ["cwList","cwDoor","cwDone"].forEach(x => el(x).classList.toggle("hidden", x !== id));
+    window.scrollTo({top:0});
+  }
+
+  function drawCrew(){
+    if(!window.I18N) return;
+    const route = el("cwRoute"); route.textContent = "";
+    const picks = seq.filter(n => n.t === "p").map(n => n.r);
+    const done = picks.filter(p => p.status).length, dec = picks.filter(p => p.status === "declined").length;
+    el("cwSummary").textContent = picks.length
+      ? T("cwSummary", {done, n: picks.length, dec})
+      : T("cwSummaryNone");
+    el("cwEmpty").classList.toggle("hidden", !!picks.length);
+    el("cwEmpty").innerHTML = T("cwEmpty");
+    let stopNo = 0;
+    seq.forEach((n, i) => {
+      if(i === 0) return;
+      const li = document.createElement("li");
+      if(n.t === "s"){ li.className = "end"; li.innerHTML = "<span class='num'>&#8962;</span><div><b></b></div>"; li.querySelector("b").textContent = T("cwBackStore"); }
+      else if(n.t === "d"){
+        stopNo++;
+        li.className = "dl";
+        const num = document.createElement("span"); num.className = "num"; num.textContent = n.r.id;
+        const d = document.createElement("div");
+        const b = document.createElement("b"); b.textContent = T("cwDeliver");
+        d.append(b, document.createTextNode(" " + (T("d_" + n.r.d)) + " · " + n.r.ldm.toFixed(1) + " ldm"));
+        li.append(num, d);
+      } else {
+        const p = n.r;
+        li.className = "pk" + (p.status ? " " + p.status : "");
+        const btn = document.createElement("button"); btn.type = "button";
+        const num = document.createElement("span"); num.className = "num"; num.textContent = p.id;
+        const d = document.createElement("div");
+        const b = document.createElement("b"); b.textContent = T("cwCollect") + " · " + pName(p);
+        const sub = document.createElement("span");
+        sub.textContent = [T("d_" + p.d), pcsTxt(p.paid, p.extras), pNote(p)].filter(Boolean).join(" · ");
+        d.append(b, sub);
+        const st = document.createElement("em");
+        st.textContent = p.status === "collected" ? T("cwStCollected", {v: fmt(p.credit)}) : p.status === "declined" ? T("cwStDeclined") : T("cwStOpen");
+        btn.append(num, d, st);
+        if(!p.status) btn.addEventListener("click", () => openDoor(p));
+        else btn.disabled = true;
+        li.appendChild(btn);
+      }
+      route.appendChild(li);
+    });
+  }
+
+  function openDoor(p){
+    cur = p;
+    door = {grade: p.grade || "B", price: p.price, apart: true, extras: p.extras, checks: [true, true, true]};
+    drawDoor();
+    crewShow("cwDoor");
+  }
+
+  function doorCredit(p, d){
+    const base = Math.round(p.paid * RATE_D[d.grade] * d.price);
+    const uplift = p.fam ? Math.round(base * 0.15) : 0;
+    const lost = (p.disBonus && !d.apart) ? p.disBonus : 0;
+    return {base, uplift, bonus: p.bonus || 0, lost, total: Math.max(0, base + uplift + (p.bonus || 0) - lost)};
+  }
+
+  function roomAfter(p, d){
+    const flat = p.flat && d.apart;
+    const ldmNew = p.paid * (flat ? 0.25 : 0.9) + d.extras * 0.25;
+    const idx = seq.findIndex(n => n.r === p);
+    const L = loads(seq);
+    let peak = 0; for(let j = idx; j < seq.length - 1; j++) peak = Math.max(peak, L[j].load);
+    return {free: CAP - (peak - p.ldm + ldmNew), ldmNew, flat};
+  }
+
+  function drawDoor(){
+    const p = cur, d = door;
+    el("cwDoorMeta").textContent = [p.id, T("d_" + p.d), T("cwAfter", {n: p.plan.after}), pNote(p)].filter(Boolean).join(" · ");
+    el("cwDoorName").textContent = pName(p);
+    const bk = el("cwBooked"); bk.textContent = "";
+    const bl = document.createElement("div"); bl.className = "letter" + (p.grade ? "" : " na"); bl.textContent = p.grade || "?";
+    const bt = document.createElement("div");
+    const b1 = document.createElement("b"); b1.textContent = p.grade ? T("cwBookedApp") : T("cwBookedAssist");
+    const b2 = document.createElement("span"); b2.textContent = (p.est ? T("cwEst") + " " : "") + "NT$ " + fmt(p.credit0 ?? p.credit) + " · " + pcsTxt(p.paid, p.extras);
+    bt.append(b1, b2); bk.append(bl, bt);
+
+    const ck = el("cwChecks"); ck.textContent = "";
+    ["cwC1","cwC2","cwC3"].forEach((k, i) => {
+      const lab = document.createElement("label"); lab.className = "chk";
+      const inp = document.createElement("input"); inp.type = "checkbox"; inp.checked = d.checks[i];
+      inp.addEventListener("change", () => { d.checks[i] = inp.checked; drawDoor(); });
+      lab.append(inp, document.createTextNode(T(k)));
+      ck.appendChild(lab);
+    });
+    const anyOff = d.checks.some(c => !c);
+    el("cwCheckHint").classList.toggle("hidden", !anyOff);
+    el("cwCheckHint").textContent = T("cwCheckHint");
+
+    const gb = el("cwGrades"); gb.textContent = "";
+    ["A","B","C","D"].forEach(g => {
+      const b = document.createElement("button"); b.type = "button"; b.textContent = g;
+      b.setAttribute("aria-pressed", d.grade === g);
+      if(g === "D") b.className = "d";
+      b.addEventListener("click", () => { d.grade = g; drawDoor(); });
+      gb.appendChild(b);
+    });
+    el("cwGradeName").textContent = T("grade_" + d.grade) + (p.grade && d.grade !== p.grade ? " · " + T("cwChanged", {g: p.grade}) : "");
+
+    el("cwPrice").value = d.price;
+    el("cwPriceF").classList.toggle("hidden", d.grade === "D");
+    el("cwApartO").classList.toggle("hidden", !(p.flat && p.disBonus));
+    el("cwApart").checked = d.apart;
+    el("cwApartD").textContent = d.apart ? "" : "−" + (p.disBonus || 0);
+    el("cwExtras").textContent = d.extras;
+
+    const c = doorCredit(p, d), r = roomAfter(p, d);
+    const eligible = d.grade !== "D" && d.price >= MIN[d.grade];
+    const m = el("cwMoney"); m.textContent = "";
+    const row = (k, v, cls) => { const x = document.createElement("div"); if(cls) x.className = cls; const a = document.createElement("span"); a.textContent = k; const b = document.createElement("span"); b.textContent = v; x.append(a, b); m.appendChild(x); };
+    row(T("cwRowBooked"), "NT$ " + fmt(p.credit0 ?? p.credit));
+    if(eligible){
+      row(T("cwRowBase", {g: d.grade, n: p.paid}), "NT$ " + fmt(c.base));
+      if(c.uplift) row(T("famRow"), "+ " + fmt(c.uplift));
+      if(c.bonus) row(T("cwRowBonus"), (c.bonus < 0 ? "− " : "+ ") + fmt(Math.abs(c.bonus)));
+      if(c.lost) row(T("cwRowLost"), "− " + fmt(c.lost));
+      row(T("cwRowNow"), "NT$ " + fmt(c.total), "sum");
+    } else {
+      row(T("cwRowNow"), T("notViable"), "sum");
+    }
+    const fl = el("cwFlag");
+    if(!eligible){
+      fl.className = "flag stop";
+      fl.textContent = "";
+      const hb = document.createElement("b"); hb.textContent = T("cwNoOfferH");
+      fl.append(hb, document.createTextNode(d.grade === "D" ? T("cwNoOfferD") : T("cwNoOfferMin", {min: fmt(MIN[d.grade])})));
+    } else fl.className = "flag hidden";
+    const fits = r.free >= -1e-9;
+    el("cwRoom").textContent = fits ? T("cwRoom", {x: r.free.toFixed(2)}) : T("cwNoRoom");
+    el("cwRoom").style.color = fits ? "" : "var(--red)";
+    el("cwAccept").disabled = !eligible || !fits;
+    el("cwAccept").classList.toggle("hidden", !eligible);
+  }
+
+  function finish(accepted){
+    const p = cur, d = door;
+    p.appGrade = p.appGrade !== undefined ? p.appGrade : (p.grade || null);
+    p.doorGrade = d.grade;
+    p.orig = p.orig || {grade:p.grade, price:p.price, credit:p.credit, est:p.est, extras:p.extras, flat:p.flat, ldm:p.ldm, note:p.note, note_zh:p.note_zh};
+    if(accepted){
+      const c = doorCredit(p, d), r = roomAfter(p, d);
+      p.credit0 = p.credit0 ?? p.credit;
+      p.status = "collected"; p.grade = d.grade; p.price = d.price; p.credit = c.total; p.est = false;
+      p.extras = d.extras; p.flat = r.flat; p.ldm = Math.round(r.ldmNew * 100) / 100;
+      if(!d.apart && p.disBonus){ if(p.note) p.note = p.note.replace("taken apart", "left assembled"); if(p.note_zh) p.note_zh = p.note_zh.replace("已拆解", "未拆解"); }
+      el("cwDoneBox").className = "done";
+      el("cwDoneK").textContent = T("cwIssuedK");
+      el("cwDoneV").textContent = "NT$ " + fmt(c.total);
+      el("cwDoneU").textContent = T("cwIssuedU");
+      el("cwDoneText").textContent = T("cwIssuedText") + (crewBonus(p) ? " " + T("cwIncentive", {v: fmt(crewBonus(p))}) : "");
+    } else {
+      p.credit0 = p.credit0 ?? p.credit;
+      p.status = "declined";
+      el("cwDoneBox").className = "done dec";
+      el("cwDoneK").textContent = T("cwDeclinedK");
+      el("cwDoneV").textContent = "NT$ 0";
+      el("cwDoneU").textContent = T("cwDeclinedU");
+      el("cwDoneText").textContent = T("cwDeclinedText");
+    }
+    render();
+    crewShow("cwDone");
+  }
+
+  el("cwPrice").addEventListener("input", e => { door.price = Math.max(0, +e.target.value || 0); drawDoor(); });
+  el("cwApart").addEventListener("change", e => { door.apart = e.target.checked; drawDoor(); });
+  el("cwMinus").addEventListener("click", () => { door.extras = Math.max(0, door.extras - 1); drawDoor(); });
+  el("cwPlus").addEventListener("click", () => { door.extras = Math.min(5, door.extras + 1); drawDoor(); });
+  el("cwAccept").addEventListener("click", () => finish(true));
+  el("cwDecline").addEventListener("click", () => finish(false));
+  el("cwBack").addEventListener("click", () => { drawCrew(); crewShow("cwList"); });
+  el("cwNext").addEventListener("click", () => { drawCrew(); crewShow("cwList"); });
+  window.addEventListener("i18n-ready", () => {
+    drawCrew();
+    I18N.onChange(() => { drawCrew(); if(cur && !el("cwDoor").classList.contains("hidden")) drawDoor(); });
+  });
+
+  seed(); baseSeq(); render();
+  if(location.hash === "#ops") show("ops");
+  if(location.hash === "#crew") show("crew");
+})();
+</script>
+
+<script>
+(function(){
+  const STATIC = [
+    ["#tabCL","顧客 App"],["#tabOL","IKEA 調度"],["#tabWL","司機 App"],
+    ["#cwTitle","收送人員 · 路線 TC-07"],["#cwSub","IKEA 台中店 · 兩人一組"],["#cwListH","今天的路線"],
+    ["#cwCheckH","門口檢查"],["#cwGradeH","到府評級"],["#cwPriceL","每件原價（新台幣）"],["#cwApartB","已依預約拆解"],
+    ["#cwExtraL","住戶還有其他要處理的家具嗎？免費，不發購物金"],["#cwAccept","住戶接受，發放購物金"],["#cwDecline","住戶拒絕"],
+    ["#cwBack","回到路線"],["#cwNext","下一站"],["#cwFoot","你在門口的結果會自動回傳給 IKEA 調度。"],
+    ["#vCustomer .brand span","家具回收 · IKEA 台中店"],
+    ["#s1 h1","送貨車已經在往你家的路上了。"],
+    ["#s1 .lead","每一趟 IKEA 送貨，回程時車廂都是半空的。把你的舊家具放上這趟車，換取 IKEA 購物金。"],
+    ["#vLabel","黑客松原型 · 非 IKEA 官方服務"],["#shotsH","上傳 4 張家具照片"],
+    [".shot[data-i='0'] .cap","整件家具正面"],[".shot[data-i='1'] .cap","另一個角度：側面或背面"],[".shot[data-i='2'] .cap","最明顯的損傷或磨損"],[".shot[data-i='3'] .cap","底部標籤，沒有的話拍細節"],
+    ["#matchSelL","不對嗎？請選擇商品"],
+    ["#shotsHint","四張都需要，才能公平評級。沒有標籤的話，拍任何細節即可。點選方格拍照或選擇照片，也可以一次選多張。"],
+    ["#go1","查看估價"],
+    ["#samples .tiny","照片評級在完整原型中即時執行。此公開版本請試用範例家具：使用預設結果，不會分析照片。"],
+    ["[data-s=chest] span","抽屜櫃"],["[data-s=table] span","邊桌"],["[data-s=chair] span","扶手椅"],
+    ["#goB","替鄰居或整棟大樓預約"],
+    ["#s1 > p.tiny:not(#shotsHint)","目前僅收取硬質家具：層架、衣櫃、桌子、床架、抽屜櫃。只要有一件符合條件的家具，同一地址其他可拆解的家具也能一併免費收走。"],
+    ["#sB h2","替他人預約"],
+    ["#sB .lead","不需要照片。人員到府時會和住戶一起評定等級，購物金發給你指定的人。"],
+    ["label[for=whoFor]","替誰預約"],
+    ["#whoFor option[value=resident]","同棟大樓的住戶"],["#whoFor option[value=relative]","親友或我照顧的人"],["#whoFor option[value=building]","同時預約多戶"],
+    ["label[for=districtB]","行政區"],["label[for=pieces]","總共幾件"],
+    ["label.opt:has(input[name=lift][value=yes]) b","大樓有電梯"],["label.opt:has(input[name=lift][value=yes]) .delta","標準"],
+    ["label.opt:has(input[name=lift][value=no]) b","沒有電梯，只有樓梯"],["label.opt:has(input[name=lift][value=no]) .delta","優先"],
+    ["label.opt:has(input[name=lift][value=no]) .why","人員免費幫你搬下樓。市政府的免費清運要求住戶自行搬到路邊，很多人因此用不了。"],
+    ["#sB .flag","<b>為什麼有這個管道</b>用照片估價會把不用 App 的人排除在外。鄰居、家人或大樓管委會都可以代為預約，條件完全相同。"],
+    ["#goB2","申請收取"],["#backB","返回"],
+    ["#sC .done .tiny:first-child","已收到申請"],["#sC .done .tiny:last-child","件家具等待到府評級"],
+    ["#restartC","回到首頁"],
+    ["label[for=price]","原價（新台幣），若實際購買價格不同請修改"],["#go3","選擇收取時段"],["#back3","重新開始"],
+    ["#s4 > h2:not([style])","選擇時段"],
+    ["#s4 > .lead:not([style])","送貨車越晚抵達你家，我們的成本越低，省下的我們回饋給你。"],
+    ["label[for=district]","你的行政區"],["#daysLbl","收取日期"],
+    ["label.opt:has(input[value=early]) b","上午 9:00-12:00"],["label.opt:has(input[value=early]) .why","車上還裝滿新品，我們得為你騰出空間。"],
+    ["label.opt:has(input[value=mid]) b","中午 12:00-15:00"],["label.opt:has(input[value=mid]) .why","車廂已經空出一部分。"],
+    ["label.opt:has(input[value=late]) b","下午 15:00-19:00，或當天任何時間"],["label.opt:has(input[value=late]) .why","我們在回程經過你家，那時車廂幾乎是空的。"],
+    ["label.opt:has(#family) b","我是 IKEA Family 會員"],["label.opt:has(#family) .why","與 IKEA 回購方案給會員的加成相同。"],
+    ["label.opt:has(#dis) b","我會自行拆解並平放堆疊"],["label.opt:has(#dis) .why","縮短到府作業時間，也減少占用的車廂空間。這是我們最大的節省，所以回饋最多。"],
+    ["label.opt:has(#inside) b","請從我家裡搬出來"],["label.opt:has(#inside) .why","改放在一樓或卸貨區，就能拿到全額。"],
+    ["#s4 > .flag","<b>鄰居加碼 +75</b>如果同棟大樓再有兩戶預約同一時段，事後加發。預約後可以傳邀請給鄰居，三戶都能拿到。"],
+    ["#s4 > h2[style]","房間裡還有其他家具嗎？"],
+    ["#s4 > p.lead[style]","一件付費家具就能帶走其他家具。同一地址、同一時段的其他可拆解 IKEA 家具，我們免費一起收走。這些家具不發購物金，直接送到 Circular Hub 二手循環專區。"],
+    ["label[for=extras]","要一起收走幾件"],
+    ["#extras option[value='0']","不用，只有這件"],["#extras option[value='1']","再 1 件"],["#extras option[value='2']","再 2 件"],["#extras option[value='3']","再 3 件"],["#extras option[value='4']","再 4 件"],["#extras option[value='5']","再 5 件"],
+    ["#go4","確認預約"],["#back4","返回"],
+    ["#s5 .done .tiny:first-child","預約完成。購物金在到府收取時發放。"],["#s5 .done .tiny:last-child","IKEA 購物金"],
+    ["#s5 .when span","收取時間"],["#impKg + span","公斤家具繼續使用"],["#impCo2 + span","公斤 CO<sub>2</sub>e 減量"],
+    ["#s5 > h2","接下來的流程"],
+    ["#s5 .steps li:nth-child(1)","<b>已預約</b>你的時段排在一條本來就會經過你家的配送路線上。"],
+    ["#s5 .steps li:nth-child(2)","<b>前一晚提醒</b>拆解、平放堆疊，放在一樓或卸貨區。"],
+    ["#s5 .steps li:nth-child(3)","<b>回程順路收取</b>人員到府確認等級並當場發放購物金。如果家具狀況比照片差，你可以當場決定，無論如何都不收費。"],
+    ["#s5 .steps li:nth-child(4)","<b>在 IKEA 台中店整修</b>在門市既有的地下倉庫進行。"],
+    ["#s5 .steps li:nth-child(5)","<b>回到 Circular Hub 二手循環專區販售</b>找到下一個主人時，我們會通知你。"],
+    ["#restart","再預約一件"],
+    [".legal p:nth-child(1)","2026 永續智慧創新黑客松原型，為 IKEA 命題打造。估價規則：依 IKEA 公開的回購比例，A / B / C 等級分別為原價的 45 / 35 / 25 %，IKEA Family 會員另加 15 %。與 IKEA 回購不同的是，我們到府收取，而且希望你先拆解。各等級最低原價為 NT$3,700 / 4,500 / 8,700，確保即使單件收取、含所有加碼與會員加成時仍有正貢獻。隨付費家具一起收走的家具不發購物金，原價只需約 NT$1,000 以上，因為它們不經整修、直接進入 Circular Hub。加碼採固定金額，因為它們帶來的節省以人員工時和車廂空間計算，與家具價值無關。軟包家具、床墊、地毯、電器與燈具不在第一階段範圍。商品清單與原價：取自 ikea.com.tw 現行售價（2026 年 11 月 7 日查詢），作為顧客購買價格的近似值。"],
+    [".legal p:nth-child(2)","環境效益以每公斤 3.62 kg CO<sub>2</sub>e 計算：依一項市政再利用計畫的研究，每公斤減量 3.9 kg，扣除營運排放 0.28 kg。同一研究也指出，家具的反彈效應為 82 至 167 %，來自人們如何花掉省下或賺到的錢。我們以購物金而非現金支付，正是為了讓這些再消費變得可見、可引導。因此這裡顯示的是扣除營運排放後的減量，並非扣除反彈效應後的淨效益，我們也不如此宣稱。"]
+  ];
+  const DYN = {
+    matchK:["We think this is","我們認為這是"],matchPicked:["You chose","你選擇了"],matchNone:["Not in our list","不在我們的清單中"],
+    viaLabel:["read from the label ({l})","從標籤辨識（{l}）"],viaLook:["recognised by its look","依外觀辨識"],viaClosest:["closest match by look, please check","依外觀最接近的商品，請確認"],viaUser:["chosen by you","由你選擇"],
+    twPrice:["IKEA Taiwan price NT$ {p}","IKEA 台灣售價 NT$ {p}"],enterPrice:["Enter the original price below","請在下方輸入原價"],
+    matchSelL:["Not right? Choose the product","不對嗎？請選擇商品"],matchOther:["Something else, I will enter the price","其他商品，我自己輸入價格"],
+    type_chest:["Chests of drawers","抽屜櫃"],type_bed:["Bed frames","床架"],type_wardrobe:["Wardrobes","衣櫃"],type_bookcase:["Bookcases","書櫃"],type_shelving:["Shelving units","層架"],type_desk:["Desks","書桌"],type_tv:["TV benches","電視櫃"],type_table:["Tables","桌子"],
+    chkComplete:["Complete, all parts present","完整，零件齊全"],chkIncomplete:["Parts or fittings missing","缺少零件或五金"],
+    chkNoWater:["No water damage or swelling","沒有泡水或膨脹"],chkWater:["Water damage or swelling","有泡水或膨脹"],
+    chkSound:["Structurally sound","結構穩固"],chkUnsound:["Broken joints or unstable","接合處損壞或不穩"],
+    wear_none:["No visible wear, grade A","沒有明顯磨損，A 級"],wear_light:["Light wear, grade B","輕微磨損，B 級"],wear_heavy:["Heavy wear, grade C","明顯磨損，C 級"],
+    shotsCount:["{n} of 4","{n} / 4 張"],shotsReady:["4 of 4, ready","4 / 4 張，完成"],
+    readingPhotos:["Reading the photos…","正在分析照片…"],
+    loadingSample:["Loading the sample…","正在載入範例…"],
+    noReading:["Photo reading is not available in this view.","此檢視無法分析照片。"],
+    err_not_granted:["You need to allow this page to use Claude before it can read the photos.","需要先允許此頁面使用 Claude，才能分析照片。"],
+    err_images_unavailable:["This view cannot send photos to Claude.","此檢視無法把照片傳給 Claude。"],
+    err_rate_limited:["Too many requests just now. Try again in a minute.","目前請求太多，請一分鐘後再試。"],
+    err_image_rejected:["One of the files could not be read. Try a different photo.","有一個檔案無法讀取，請換一張照片。"],
+    err_invalid_json:["The reading came back unreadable. Try again.","分析結果無法讀取，請再試一次。"],
+    err_refused:["Claude declined to read these photos.","Claude 拒絕分析這些照片。"],
+    err_default:["Something went wrong reading the photos. Try again.","分析照片時發生錯誤，請再試一次。"],
+    errSuffix:[" You can also try a sample piece below.","也可以試試下方的範例家具。"],
+    footOk:["",""],
+    footNo:["Photo reading is unavailable in this view. The offer rules below still apply.","此檢視無法分析照片，下方的估價規則仍然適用。"],
+    unidentified:["Unidentified piece","無法辨識的家具"],
+    samplePreset:["sample piece, preset result","範例家具，預設結果"],
+    conf_high:["high confidence","可信度高"],conf_medium:["medium confidence","可信度中"],conf_low:["low confidence","可信度低"],
+    grade_A:["As new, no visible wear","近全新，沒有明顯使用痕跡"],grade_B:["Used, complete, sound","有使用痕跡，完整堪用"],
+    grade_C:["Heavy wear but usable","磨損明顯，但仍可使用"],grade_D:["Broken or incomplete","損壞或不完整"],
+    notEligible:["Not eligible","不符合資格"],
+    rateLine:["IKEA Buyback rate {r} % of original price","IKEA 回購比例：原價的 {r} %"],
+    blocked:["<b>Not in phase one</b>This category cannot ride with new goods: it does not stack flat and soft materials carry a hygiene risk in Taichung&rsquo;s humidity. Donation or the city&rsquo;s free bulky collection is the right route today.","<b>不在第一階段範圍</b>這類家具無法和新品同車：無法平放堆疊，而且在台中的潮濕氣候下，軟性材質有衛生風險。目前建議捐贈，或使用市政府的免費大型垃圾清運。"],
+    resaleValue:["Expected resale value","預估轉售價值"],na:["not applicable","不適用"],
+    origPrice:["Original price","原價"],rateRow:["IKEA Buyback rate, grade {g}","IKEA 回購比例，{g} 級"],
+    offer:["Offer","估價"],notViable:["not viable","無法收取"],baseOffer:["Base offer","基本估價"],
+    noOfferHead:["We are not making an offer","我們無法提供估價"],
+    otherHead:["Nothing we can take back","沒有可回收的家具"],otherBody:["We could not find a piece of hard furniture in these photos. Try again with the whole item in frame.","照片中找不到硬質家具，請拍下完整的家具再試一次。"],
+    partsHead:["Parts missing","缺少零件"],partsBody:["A piece with missing fittings cannot go back on sale as it is. Get the fittings first and check again, and the grade goes up with them.","缺少零件的家具無法直接再販售。請先補齊零件再估價，等級也會跟著提高。"],
+    dHead:["Too damaged to resell","損壞太嚴重，無法再販售"],dBody:["Broken, water-damaged or unstable pieces cannot go back on sale. The city collects bulky items free of charge.","損壞、泡水或結構不穩的家具無法再販售。市政府提供免費大型垃圾清運。"],
+    minBody:["In this condition the piece needs to have cost at least NT${min} new for the pickup to pay for itself. Below that we would be quoting you something we cannot stand behind. The city collects bulky items free of charge, and Tzu Chi takes working furniture.","以目前的狀況，這件家具的原價至少要 NT${min}，收取才划得來。低於這個價格，我們給出的估價就站不住腳。市政府提供免費大型垃圾清運，慈濟也接受仍可使用的家具。"],
+    win_early:["morning, 9:00-12:00","上午 9:00-12:00"],win_mid:["midday, 12:00-15:00","中午 12:00-15:00"],win_late:["afternoon, 15:00-19:00","下午 15:00-19:00"],
+    anyTime:[" or any time that day","，或當天任何時間"],
+    dayNote:["Days when a delivery round already passes through {d}. Demo schedule.","配送路線本來就會經過{d}的日子。示範排程。"],
+    famRow:["IKEA Family, +15 %","IKEA Family 會員 +15 %"],lateSlot:["Late slot","下午時段"],midSlot:["Midday slot","中午時段"],
+    takenApart:["Taken apart","自行拆解"],carried:["Carried from inside","從室內搬出"],
+    neighbour:["Neighbour bonus","鄰居加碼"],pending:["+ 75 pending","+ 75 待確認"],
+    morePieces:["{n} more pieces taken away","另外收走 {n} 件"],free:["free","免費"],creditOn:["Credit on pickup","收取時發放購物金"],
+    extraLine:["Plus {n} more pieces collected at no charge. They carry no credit and go to the Circular Hub as they are. Anything we cannot resell there we tell you about at the door rather than take away.","另外免費收走 {n} 件。這些家具不發購物金，直接送到 Circular Hub。無法在那裡販售的家具，我們會在到府時告知，不會直接載走。"],
+    inviteBtn:["Invite neighbours to the same slot, +75 each","邀請鄰居預約同一時段，每戶 +75"],
+    inviteCopied:["Invite copied, paste it in your building group","邀請已複製，貼到大樓群組吧"],
+    inviteFallback:["Copy this message to your building group","把這段訊息複製到大樓群組"],
+    inviteMsg:["I booked a free IKEA furniture pickup in {d} on {day}, {win}. Book the same slot in The Empty Return and we each get NT$75 extra store credit.","我在 The Empty Return 預約了 IKEA 家具到府收取：{d}，{day}，{win}。預約同一時段，我們每戶都能多拿 NT$75 購物金。"],
+    aNoLift:["Flagged as a stairs-only address, so the crew is scheduled with carry-down time and the slot goes to the end of a round, where there is space for it.","已標記為只有樓梯的地址，排班時會預留搬運時間，並安排在路線尾端，那時車上有空間。"],
+    aLift:["Scheduled into a delivery round already serving your area.","已排進一條本來就會經過你所在區域的配送路線。"],
+    aBuilding:["Booked as one building pickup. Three or more households in the same slot each earn the neighbour bonus of NT$75.","以整棟大樓一次收取預約。同一時段有三戶以上，每戶都可獲得 NT$75 鄰居加碼。"],
+    aResident:["The resident confirms the grade at the door and decides then. Nothing is charged if they decline.","住戶在門口確認等級後再決定，拒絕也不收任何費用。"],
+    aCredit:["Expected credit per piece is set once the crew grades it, on the same A to D scale the app uses.","每件的購物金在人員評級後確定，採用與 App 相同的 A 到 D 等級。"]
+  };
+  Object.assign(DYN, {
+    cwSummary:["{done} of {n} pickups done · {dec} declined at the door","{n} 件收取中已完成 {done} 件 · 門口拒收 {dec} 件"],
+    cwSummaryNone:["No pickups on this round yet.","這條路線目前還沒有收取任務。"],
+    cwEmpty:["<b>No pickups assigned yet</b>IKEA dispatch has not added any pickups to this round. Deliveries run as usual.","<b>目前沒有指派的收取任務</b>IKEA 調度尚未在這條路線加入收取。送貨照常進行。"],
+    cwBackStore:["Back to IKEA Taichung","返回 IKEA 台中店"],cwDeliver:["Deliver","送貨"],cwCollect:["Collect","收取"],
+    cwFree:["free","件免費"],cwPcs:["pcs","件"],
+    cwStOpen:["Check at door","到府檢查"],cwStCollected:["NT$ {v} issued","已發放 NT$ {v}"],cwStDeclined:["Declined","已拒收"],
+    cwAfter:["after stop {n}","第 {n} 站之後"],
+    cwBookedApp:["Booked in the app, graded from photos","App 預約，依照片評級"],cwBookedAssist:["Assisted booking, grade at the door","代為預約，到府評級"],
+    cwEst:["est.","預估"],
+    cwC1:["Complete, all parts and fittings present","完整，零件與五金齊全"],cwC2:["No water damage, swelling or mould","沒有泡水、膨脹或發霉"],cwC3:["Stable, no broken joints","結構穩固，接合處沒有損壞"],
+    cwCheckHint:["An unchecked item usually means grade C or D.","任何一項未勾選，通常代表 C 或 D 級。"],
+    cwChanged:["app said {g}","App 評為 {g}"],
+    cwRowBooked:["Credit at booking","預約時的購物金"],cwRowBase:["Grade {g} at the door, {n} pc","到府評為 {g} 級，{n} 件"],
+    cwRowBonus:["Slot and handling bonuses","時段與拆解加碼"],cwRowLost:["Not taken apart","未拆解"],cwRowNow:["Credit to issue now","現在發放的購物金"],
+    cwNoOfferH:["No offer at this grade","此等級無法提供估價"],
+    cwNoOfferD:["Broken or incomplete pieces cannot go back on sale. Leave it with the household and point them to the city's free bulky collection.","損壞或不完整的家具無法再販售。請留給住戶，並建議使用市政府的免費大型垃圾清運。"],
+    cwNoOfferMin:["At this grade the piece needs to have cost at least NT${min} new.","以這個等級，原價至少要 NT${min}。"],
+    cwRoom:["Room left on the van after this stop: {x} ldm","這站之後車上剩餘空間：{x} ldm"],
+    cwNoRoom:["Not enough room on the van for this. Take fewer extra pieces.","車上空間不夠，請減少額外收取的件數。"],
+    cwIssuedK:["Credit issued at the door","已在門口發放購物金"],cwIssuedU:["IKEA store credit","IKEA 購物金"],
+    cwIssuedText:["Title passes here, so the piece travels as purchased goods, not as waste. It goes to the lower-level warehouse for refurbishment.","所有權在此轉移，家具以購得商品而非廢棄物的身分運送，送往地下倉庫整修。"],
+    cwIncentive:["Crew bonus for the extra pieces at this stop: NT${v}.","本站額外收取件數的人員獎勵：NT${v}。"],
+    cwDeclinedK:["Customer declined","住戶拒絕"],cwDeclinedU:["Nothing charged, nothing taken","不收費，也不載走"],
+    cwDeclinedText:["Leave the piece with the household. If it is broken, point them to the city's free bulky collection. Nothing is charged, and the stop counts as done.","把家具留給住戶。如果已損壞，請建議使用市政府的免費大型垃圾清運。不收任何費用，這一站視為完成。"],
+    d_Nantun:["Nantun","南屯"],d_Xitun:["Xitun","西屯"],d_Beitun:["Beitun","北屯"],d_North:["North","北區"],d_West:["West","西區"],d_Central:["Central","中區"],d_East:["East","東區"],d_South:["South","南區"],d_Dali:["Dali","大里"],d_Taiping:["Taiping","太平"]
+  });
+  let lang = "en";
+  try{ const v = localStorage.getItem("ter-lang"); if(v === "zh" || v === "en") lang = v; }catch(e){}
+  if(/zh/.test(location.hash)) lang = "zh";
+  const en = new Map();
+  const fns = [];
+  function apply(){
+    document.documentElement.lang = lang === "zh" ? "zh-Hant-TW" : "en";
+    STATIC.forEach(([sel, zh]) => {
+      document.querySelectorAll(sel).forEach(node => {
+        if(!en.has(node)) en.set(node, node.innerHTML);
+        node.innerHTML = lang === "zh" ? zh : en.get(node);
+      });
+    });
+    const b = document.getElementById("langBtn");
+    if(b){ b.textContent = lang === "zh" ? "EN" : "中文"; b.setAttribute("aria-label", lang === "zh" ? "Switch to English" : "切換為中文"); }
+  }
+  window.I18N = {
+    get lang(){ return lang; },
+    t(key, vars){
+      const e = DYN[key]; let s = e ? (lang === "zh" ? e[1] : e[0]) : key;
+      if(vars) Object.keys(vars).forEach(k => { s = s.split("{" + k + "}").join(vars[k]); });
+      return s;
+    },
+    set(l){ lang = l; try{ localStorage.setItem("ter-lang", l); }catch(e){} apply(); fns.forEach(f => { try{ f(); }catch(e){} }); },
+    onChange(f){ fns.push(f); },
+    missing(){ return STATIC.filter(([sel]) => !document.querySelector(sel)).map(x => x[0]); }
+  };
+  document.getElementById("langBtn").addEventListener("click", () => I18N.set(lang === "zh" ? "en" : "zh"));
+  apply();
+  window.dispatchEvent(new Event("i18n-ready"));
+})();
+</script>
+<script>
+(function(){
+  const RULES = {
+    buyback: {A:0.45, B:0.35, C:0.25, D:0},
+    minPrice: {A:3700, B:4500, C:8700, D:0},
+    gradeName: {A:"As new, no visible wear", B:"Used, complete, sound", C:"Heavy wear but usable", D:"Broken or incomplete"},
+    familyUplift: 0.15,
+    extraMinPrice: 800, maxExtras: 5,
+    bonusDis: 150, bonusSlot: {early:0, mid:25, late:50}, bonusNeighbour: 75, penaltyInside: 150,
+    co2PerKg: 3.62,
+    blocked: ["upholstered","mattress","rug","electrical","lighting"]
+  };
+  const el = id => document.getElementById(id);
+  const fmt = n => new Intl.NumberFormat("en-US",{maximumFractionDigits:0}).format(Math.round(n));
+  const screens = ["s1","s2","s3","s4","s5","sB","sC"];
+  let files = [], item = null, sample = null, sampleChecked = false;
+  function renderFoot(){ const t = I18N.t(sampleChecked && !sample ? "footNo" : "footOk"); el("footNote").textContent = t; el("footNote").closest(".foot").classList.toggle("hidden", !t); }
+
+  function show(id, step){
+    screens.forEach(s => el(s).classList.toggle("hidden", s !== id));
+    [...el("rail").children].forEach((b,i) => b.classList.toggle("on", i <= step));
+    window.scrollTo({top:0});
+  }
+
+  claude.use("sample").then(s => {
+    sample = s; sampleChecked = true; renderFoot();
+  }).catch(function(){});
+
+  const shots = [null, null, null, null];
+  const shotEls = [...document.querySelectorAll("#shots .shot")];
+  function renderShots(){
+    shotEls.forEach((box, i) => {
+      const f = shots[i], img = box.querySelector("img");
+      if(img.dataset.url){ URL.revokeObjectURL(img.dataset.url); delete img.dataset.url; }
+      if(f){ img.dataset.url = URL.createObjectURL(f); img.src = img.dataset.url; }
+      img.hidden = !f; box.classList.toggle("has", !!f); box.querySelector(".x").hidden = !f;
+    });
+    files = shots.filter(Boolean);
+    const c = el("shotsCount");
+    c.textContent = files.length === 4 ? I18N.t("shotsReady") : I18N.t("shotsCount", {n: files.length});
+    c.classList.toggle("ok", files.length === 4);
+    el("go1").disabled = files.length < 4;
+    el("e1").classList.add("hidden");
+  }
+  shotEls.forEach((box, i) => {
+    const inp = box.querySelector("input");
+    inp.addEventListener("change", () => {
+      const list = [...inp.files].filter(f => !f.type || f.type.startsWith("image/"));
+      if(list.length){
+        shots[i] = list[0];
+        let k = 0;
+        list.slice(1).forEach(f => { while(k < 4 && shots[k]) k++; if(k < 4) shots[k] = f; });
+      }
+      inp.value = "";
+      el("thumbs").classList.add("hidden");
+      renderShots();
+    });
+    box.querySelector(".x").addEventListener("click", () => { shots[i] = null; renderShots(); });
+  });
+  function shrink(file){
+    return new Promise(resolve => {
+      const url = URL.createObjectURL(file), im = new Image();
+      im.onload = () => {
+        try{
+          const m = 1280, r = Math.min(1, m / Math.max(im.naturalWidth, im.naturalHeight));
+          const c = document.createElement("canvas");
+          c.width = Math.round(im.naturalWidth * r); c.height = Math.round(im.naturalHeight * r);
+          c.getContext("2d").drawImage(im, 0, 0, c.width, c.height);
+          c.toBlob(b => { URL.revokeObjectURL(url); resolve(b || file); }, "image/jpeg", 0.85);
+        }catch(e){ URL.revokeObjectURL(url); resolve(file); }
+      };
+      im.onerror = () => { URL.revokeObjectURL(url); resolve(file); };
+      im.src = url;
+    });
+  }
+
+  const CATALOG = [
+    {id:"malm6", n:"MALM chest of 6 drawers", s:"white, 80x123 cm", t:"chest", p:4999},
+    {id:"malm3", n:"MALM chest of 3 drawers", s:"white, 80x78 cm", t:"chest", p:2999},
+    {id:"brimnes4", n:"BRIMNES chest of 4 drawers", s:"white, 78x124 cm", t:"chest", p:3999},
+    {id:"brimnes3", n:"BRIMNES chest of 3 drawers", s:"white, 78x95 cm", t:"chest", p:3499},
+    {id:"nordli6", n:"NORDLI chest of 6 drawers", s:"white, 120x76 cm", t:"chest", p:7799},
+    {id:"nordli3", n:"NORDLI chest of 3 drawers", s:"white, 80x76 cm", t:"chest", p:4799},
+    {id:"alex", n:"ALEX drawer unit on castors", s:"white/black, 36x76 cm", t:"chest", p:2599},
+    {id:"malmbed", n:"MALM bed frame, high", s:"white/Lur\u00f6y, 150x200 cm", t:"bed", p:7999},
+    {id:"hemnesbed", n:"HEMNES bed frame", s:"white stain/Lur\u00f6y, 150x200 cm", t:"bed", p:9990},
+    {id:"brimnesbed", n:"BRIMNES bed frame with storage", s:"white/Lur\u00f6y, 150x200 cm", t:"bed", p:9990},
+    {id:"songesand", n:"SONGESAND bed frame", s:"brown/Lur\u00f6y, 150x200 cm", t:"bed", p:7499},
+    {id:"nordlibed", n:"NORDLI bed frame with storage", s:"white, 120x200 cm", t:"bed", p:8999},
+    {id:"brimneswr2", n:"BRIMNES wardrobe with 2 doors", s:"white, 78x190 cm", t:"wardrobe", p:4499},
+    {id:"brimneswr3", n:"BRIMNES wardrobe with 3 doors", s:"white, 117x190 cm", t:"wardrobe", p:5999},
+    {id:"pax", n:"PAX/FORSAND wardrobe", s:"white stained oak effect, 100x60x201 cm", t:"wardrobe", p:17350},
+    {id:"billy80", n:"BILLY bookcase", s:"white, 80x28x202 cm", t:"bookcase", p:2290},
+    {id:"billy40", n:"BILLY bookcase", s:"white, 40x28x202 cm", t:"bookcase", p:1490},
+    {id:"billydoors", n:"BILLY bookcase with doors", s:"white, 80x30x202 cm", t:"bookcase", p:3490},
+    {id:"hemnesbook", n:"HEMNES bookcase", s:"white stain/light brown, 90x198 cm", t:"bookcase", p:6799},
+    {id:"brimnesbook", n:"BRIMNES bookcase", s:"white, 60x190 cm", t:"bookcase", p:3499},
+    {id:"kallax22", n:"KALLAX shelving unit, 2x2", s:"white, 77x77 cm", t:"shelving", p:1799},
+    {id:"kallax24", n:"KALLAX shelving unit, 2x4", s:"white, 77x147 cm", t:"shelving", p:2599},
+    {id:"kallax44", n:"KALLAX shelving unit, 4x4", s:"white, 147x147 cm", t:"shelving", p:4499},
+    {id:"malmdesk", n:"MALM desk", s:"white, 140x65 cm", t:"desk", p:5499},
+    {id:"hemnesdesk", n:"HEMNES desk with 2 drawers", s:"white stain/light brown, 120x47 cm", t:"desk", p:4999},
+    {id:"micke105", n:"MICKE desk", s:"white, 105x50 cm", t:"desk", p:2999},
+    {id:"micke142", n:"MICKE desk", s:"white, 142x50 cm", t:"desk", p:3499},
+    {id:"hemnestv", n:"HEMNES TV bench", s:"white stain/light brown, 148x47 cm", t:"tv", p:8999},
+    {id:"brimnestv", n:"BRIMNES TV bench", s:"white, 180x41 cm", t:"tv", p:3999},
+    {id:"lacktv", n:"LACK TV bench", s:"white, 160x35 cm", t:"tv", p:1999},
+    {id:"lackcoffee", n:"LACK coffee table", s:"white, 90x55 cm", t:"table", p:999},
+    {id:"lackside", n:"LACK side table", s:"white, 55x55 cm", t:"table", p:399}
+  ];
+  const PROMPT = `You assess used furniture for a take-back programme run by IKEA in Taichung, Taiwan.
+The four photos are, in order: the whole piece from the front, a second angle, the closest damage or wear, and the product label underneath if the piece has one (otherwise a close-up of a detail).
+Look at the photos and answer with one JSON object and nothing else.
+
+Identify the product against this IKEA Taiwan catalogue. Always choose the single closest entry by type, size and look, even if you are unsure; never leave it empty for hard furniture.
+${CATALOG.map(c => c.id + " | " + c.n + " | " + c.s).join("\n")}
+
+{
+ "match_id": "id from the catalogue above, the closest match",
+ "match_confidence": "high" | "medium" | "low",
+ "label_read": "article number or product name exactly as printed on a visible label, else null",
+ "name": "short plain name of what you see, e.g. Chest of six drawers",
+ "name_zh": "the same short name in Traditional Chinese as used in Taiwan",
+ "category": "one of: hard_furniture, upholstered, mattress, rug, electrical, lighting, other",
+ "weight_kg": integer, rough weight,
+ "checks": {
+   "complete": true | false, all parts, doors, drawers and fittings present,
+   "water_damage": true | false, swelling, delamination, water stains or mould,
+   "structural_damage": true | false, broken joints, cracks, wobbling or bent frame,
+   "surface_wear": "none" | "light" | "heavy", scratches, dents, chips and stains
+ },
+ "notes": ["three short observations about condition, each under 12 words"],
+ "notes_zh": ["the same three observations in Traditional Chinese as used in Taiwan"]
+}
+
+Judge only what the photos show. If a detail cannot be seen, assume it is fine and say so in a note.
+If the photos do not show furniture at all, set category to "other".`;
+
+  const SAMPLES = {
+    chest: {name:"Chest of six drawers", name_zh:"六抽抽屜櫃", category:"hard_furniture", match_id:"malm6", match_confidence:"high", label_read:"MALM", weight_kg:51,
+            checks:{complete:true, water_damage:false, structural_damage:false, surface_wear:"light"},
+            notes:["Complete, all six drawers run smoothly","Light scratch on the side panel","No swelling or water marks on the base"], notes_zh:["完整，六個抽屜都很順","側板有輕微刮痕","底部沒有膨脹或水痕"]},
+    table: {name:"Small side table", name_zh:"小邊桌", category:"hard_furniture", match_id:"lackside", match_confidence:"medium", label_read:null, weight_kg:4,
+            checks:{complete:true, water_damage:false, structural_damage:false, surface_wear:"none"},
+            notes:["Like new, no visible marks","Legs firm, top level","No label visible underneath"], notes_zh:["近全新，沒有明顯痕跡","桌腳穩固，桌面平整","底部看不到標籤"]},
+    chair: {name:"Upholstered armchair", name_zh:"布面扶手椅", category:"upholstered", match_id:null, match_confidence:"medium", label_read:null, weight_kg:15,
+            checks:{complete:true, water_damage:false, structural_damage:false, surface_wear:"light"},
+            notes:["Fabric cover worn on the seat","Small stain near the front edge","Frame and legs sound"], notes_zh:["座墊布料磨損","前緣有小污漬","框架與椅腳完好"]}
+  };
+  let isSample = false;
+  const catById = id => CATALOG.find(c => c.id === id) || null;
+  function gradeFrom(ch){
+    if(!ch.complete) return "D";
+    if(ch.water_damage || ch.structural_damage) return "D";
+    return ch.surface_wear === "none" ? "A" : ch.surface_wear === "heavy" ? "C" : "B";
+  }
+  function norm(it){
+    it = (it && typeof it === "object") ? it : {};
+    const b = v => v === true || v === "true";
+    const c = it.checks && typeof it.checks === "object" ? it.checks : {};
+    const wear = String(c.surface_wear || "light").toLowerCase();
+    it.checks = {complete: c.complete === undefined ? true : b(c.complete), water_damage: b(c.water_damage), structural_damage: b(c.structural_damage), surface_wear: ["none","light","heavy"].includes(wear) ? wear : "light"};
+    it.category = String(it.category || "other").toLowerCase();
+    it.grade = it.category === "other" ? "D" : gradeFrom(it.checks);
+    it.missing_parts = !it.checks.complete;
+    it.match = it.category === "hard_furniture" ? (catById(String(it.match_id || "")) || null) : null;
+    it.match_confidence = ["high","medium","low"].includes(it.match_confidence) ? it.match_confidence : "low";
+    it.label_read = it.label_read ? String(it.label_read).slice(0, 40) : null;
+    it.new_price_twd = it.match ? it.match.p : 0;
+    it.weight_kg = Math.round(+it.weight_kg) || null;
+    it.notes = Array.isArray(it.notes) ? it.notes.slice(0, 4).map(String) : [];
+    it.name = it.name ? String(it.name) : null;
+    it.name_zh = it.name_zh ? String(it.name_zh) : null;
+    it.notes_zh = Array.isArray(it.notes_zh) ? it.notes_zh.slice(0, 4).map(String) : [];
+    it.product = null;
+    return it;
+  }
+  document.querySelectorAll(".sample").forEach(b => b.addEventListener("click", () => {
+    const k = b.dataset.s;
+    files = []; isSample = true;
+    const t = el("thumbs"); t.textContent = "";
+    const i = document.createElement("img"); i.src = b.querySelector("img").src; i.alt = ""; t.appendChild(i);
+    t.classList.remove("hidden");
+    el("e1").classList.add("hidden");
+    show("s2", 1);
+    el("thinkMsg").textContent = I18N.t("loadingSample");
+    setTimeout(() => { item = norm(Object.assign({}, SAMPLES[k], {notes:SAMPLES[k].notes.slice(), notes_zh:SAMPLES[k].notes_zh.slice()})); renderOffer(); }, 1100);
+  }));
+  // sample pieces are a presenter fallback only: shown when the link ends in #samples
+  if(window.__standalone || /samples/.test(location.hash)) el("samples").hidden = false;
+
+  el("go1").addEventListener("click", async () => {
+    isSample = false;
+    if(files.length < 4) return;
+    show("s2", 1);
+    el("thinkMsg").textContent = I18N.t("readingPhotos");
+    if(!sample){
+      el("e1").textContent = I18N.t("noReading") + (el("samples").hidden ? "" : I18N.t("errSuffix"));
+      el("e1").classList.remove("hidden");
+      show("s1", 0); return;
+    }
+    try{
+      const lim = await sample.limits();
+      if(!lim.images) throw {code:"images_unavailable"};
+      const imgs = await Promise.all(shots.filter(Boolean).map(shrink));
+      item = norm(await sample.json(PROMPT, {images: imgs, modelTier:"default"}));
+      renderOffer();
+    }catch(err){
+      const known = ["not_granted","images_unavailable","rate_limited","image_rejected","invalid_json","refused"];
+      el("e1").textContent = I18N.t(known.includes(err && err.code) ? "err_" + err.code : "err_default") + (el("samples").hidden ? "" : I18N.t("errSuffix"));
+      el("e1").classList.remove("hidden");
+      show("s1", 0);
+    }
+  });
+
+  const zh = () => I18N.lang === "zh";
+  const itemName = () => item.match ? item.match.n : ((zh() && item.name_zh) || item.name || I18N.t("unidentified"));
+  function renderOffer(keepPrice){
+    el("itemName").textContent = itemName();
+    el("itemMeta").textContent = [(zh() && item.name_zh) || item.name, item.weight_kg ? item.weight_kg + " kg" : null, isSample ? I18N.t("samplePreset") : null].filter(Boolean).join(" \u00b7 ");
+
+    const g = RULES.buyback[item.grade] !== undefined ? item.grade : "D";
+    el("gradeLetter").textContent = g;
+    el("gradeLetter").classList.toggle("stop", g === "D");
+    el("gradeName").textContent = I18N.t("grade_" + g);
+    el("gradeFactor").textContent = g === "D" ? I18N.t("notEligible") : I18N.t("rateLine", {r: Math.round(RULES.buyback[g]*100)});
+
+    renderMatch();
+    const cl = el("checksList"); cl.textContent = "";
+    if(item.category === "hard_furniture"){
+      const ch = item.checks;
+      [[ch.complete, "chkComplete", "chkIncomplete"], [!ch.water_damage, "chkNoWater", "chkWater"], [!ch.structural_damage, "chkSound", "chkUnsound"]].forEach(([ok, a, bk]) => {
+        const li = document.createElement("li"); li.className = ok ? "ok" : "bad";
+        const ic = document.createElement("i"); ic.textContent = ok ? "\u2713" : "\u2715";
+        li.append(ic, document.createTextNode(I18N.t(ok ? a : bk))); cl.appendChild(li);
+      });
+      const li = document.createElement("li"); li.className = ch.surface_wear === "heavy" ? "bad" : "ok";
+      const ic = document.createElement("i"); ic.textContent = "\u2192";
+      li.append(ic, document.createTextNode(I18N.t("wear_" + ch.surface_wear)));
+      cl.appendChild(li);
+    }
+    const n = el("notes"); n.textContent = "";
+    ((zh() && item.notes_zh && item.notes_zh.length) ? item.notes_zh : (item.notes || [])).forEach(t => { const li = document.createElement("li"); li.textContent = t; n.appendChild(li); });
+
+    if(!keepPrice) el("price").value = item.new_price_twd || 0;
+
+    const blocked = RULES.blocked.includes(item.category);
+    const flag = el("flag");
+    if(blocked){
+      flag.className = "flag stop";
+      flag.innerHTML = I18N.t("blocked");
+    } else { flag.className = "flag hidden"; }
+
+    el("priceField").classList.toggle("hidden", blocked || g === "D" || item.category === "other");
+    priceOrOffer();
+    show("s3", 2);
+  }
+
+  function catLabel(c){ return c.n + ", " + c.s; }
+  function renderMatch(){
+    const box = el("matchBox");
+    if(item.category !== "hard_furniture"){ box.classList.add("hidden"); return; }
+    box.classList.remove("hidden");
+    const sel = el("matchSel"); sel.textContent = "";
+    const types = ["chest","bed","wardrobe","bookcase","shelving","desk","tv","table"];
+    types.forEach(t => {
+      const og = document.createElement("optgroup"); og.label = I18N.t("type_" + t);
+      CATALOG.filter(c => c.t === t).forEach(c => { const o = document.createElement("option"); o.value = c.id; o.textContent = catLabel(c) + " \u00b7 NT$ " + fmt(c.p); og.appendChild(o); });
+      sel.appendChild(og);
+    });
+    const other = document.createElement("option"); other.value = "other"; other.textContent = I18N.t("matchOther"); sel.appendChild(other);
+    sel.value = item.match ? item.match.id : "other";
+    if(item.match){
+      el("matchK").textContent = I18N.t(item.userPicked ? "matchPicked" : "matchK");
+      el("matchName").textContent = catLabel(item.match);
+      const how = item.userPicked ? I18N.t("viaUser") : item.label_read ? I18N.t("viaLabel", {l: item.label_read}) : item.match_confidence === "low" ? I18N.t("viaClosest") : I18N.t("viaLook");
+      el("matchMeta").textContent = how + " \u00b7 " + I18N.t("twPrice", {p: fmt(item.match.p)});
+      el("matchMeta").className = (!item.userPicked && !item.label_read && item.match_confidence === "low") ? "low" : "";
+    } else {
+      el("matchK").textContent = I18N.t("matchNone");
+      el("matchName").textContent = (zh() && item.name_zh) || item.name || I18N.t("unidentified");
+      el("matchMeta").textContent = I18N.t("enterPrice"); el("matchMeta").className = "low";
+    }
+  }
+  el("matchSel").addEventListener("change", e => {
+    const v = e.target.value;
+    item.userPicked = true;
+    item.match = v === "other" ? null : catById(v);
+    el("price").value = item.match ? item.match.p : (item.match === null ? (+el("price").value || 0) : 0);
+    renderMatch(); priceOrOffer();
+  });
+
+  function offer(){
+    const price = Math.max(0, +el("price").value || 0);
+    const g = RULES.buyback[item.grade] !== undefined ? item.grade : "D";
+    const blocked = RULES.blocked.includes(item.category);
+    const base = Math.round(price * RULES.buyback[g]);
+    const min = RULES.minPrice[g];
+    const eligible = !blocked && g !== "D" && !item.missing_parts && price >= min;
+    return {price, base, min, eligible, blocked, grade:g};
+  }
+
+  function rowInto(m, k, v, cls){
+    const d = document.createElement("div");
+    const a = document.createElement("span"); a.textContent = k;
+    const b = document.createElement("span"); b.textContent = v;
+    if(cls) d.className = cls;
+    d.append(a,b); m.appendChild(d);
+  }
+
+  function priceOrOffer(){
+    const o = offer();
+    const m = el("offerMoney"); m.textContent = "";
+    if(o.blocked){
+      rowInto(m, I18N.t("resaleValue"), I18N.t("na"));
+      el("go3").classList.add("hidden");
+      return;
+    }
+    if(o.grade !== "D" && item.category !== "other"){
+      rowInto(m, I18N.t("origPrice"), "NT$ " + fmt(o.price));
+      rowInto(m, I18N.t("rateRow", {g:o.grade}), Math.round(RULES.buyback[o.grade]*100) + " %");
+    }
+    if(!o.eligible){
+      rowInto(m, I18N.t("offer"), I18N.t("notViable"), "sum");
+      const flag = el("flag");
+      flag.className = "flag stop";
+      let head = I18N.t("noOfferHead"), body;
+      if(item.category === "other"){ head = I18N.t("otherHead"); body = I18N.t("otherBody"); }
+      else if(item.missing_parts){ head = I18N.t("partsHead"); body = I18N.t("partsBody"); }
+      else if(o.grade === "D"){ head = I18N.t("dHead"); body = I18N.t("dBody"); }
+      else { body = I18N.t("minBody", {min: fmt(o.min)}); }
+      flag.textContent = "";
+      const hb = document.createElement("b"); hb.textContent = head;
+      flag.append(hb, document.createTextNode(body));
+      el("go3").classList.add("hidden");
+    } else {
+      rowInto(m, I18N.t("baseOffer"), "NT$ " + fmt(o.base), "sum");
+      if(!o.blocked) el("flag").className = "flag hidden";
+      el("go3").classList.remove("hidden");
+      el("go3").disabled = false;
+    }
+  }
+  el("price").addEventListener("input", priceOrOffer);
+
+  const DIST_ORDER = ["Nantun","Xitun","Beitun","North","West","Central","East","South","Dali","Taiping"];
+  const WIN = w => I18N.t("win_" + w);
+  let pickDay = null;
+  const dayFmt = d => zh() ? (d.getMonth()+1) + "/" + d.getDate() + "（" + "日一二三四五六"[d.getDay()] + "）" : d.toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short"});
+  const distName = (sel) => { const o = el(sel).selectedOptions[0]; if(!o) return el(sel).value; const parts = o.textContent.split(" "); return zh() ? (parts[1] || parts[0]) : o.textContent; };
+  function roundDays(d){
+    const i = Math.max(0, DIST_ORDER.indexOf(d)), out = [], now = new Date();
+    for(let k = 1; out.length < 4 && k < 15; k++){
+      const dt = new Date(now.getFullYear(), now.getMonth(), now.getDate() + k);
+      const wd = dt.getDay();
+      if(wd === 0) continue;
+      if(i < 2 || (wd + i) % 2 === 0) out.push(dt);
+    }
+    return out;
+  }
+  function renderDays(){
+    const d = el("district").value, box = el("days"), list = roundDays(d);
+    box.textContent = "";
+    if(!pickDay || !list.some(x => +x === +pickDay)) pickDay = list[0];
+    list.forEach(dt => {
+      const b = document.createElement("button"); b.type = "button";
+      b.textContent = dayFmt(dt);
+      b.setAttribute("aria-pressed", +dt === +pickDay);
+      b.addEventListener("click", () => { pickDay = dt; renderDays(); });
+      box.appendChild(b);
+    });
+    el("dayNote").textContent = I18N.t("dayNote", {d: distName("district")});
+  }
+  el("district").addEventListener("change", renderDays);
+
+  function slotTotal(){
+    const o = offer();
+    const win = document.querySelector('input[name=win]:checked').value;
+    const dis = el("dis").checked, inside = el("inside").checked, fam = el("family").checked;
+    const extras = +el("extras").value || 0;
+    const uplift = fam ? Math.round(o.base * RULES.familyUplift) : 0;
+    let t = o.base + uplift;
+    t += RULES.bonusSlot[win] || 0;
+    if(dis) t += RULES.bonusDis;
+    if(inside) t -= RULES.penaltyInside;
+    return {base:o.base, uplift, fam, win, dis, inside, extras, total:Math.max(0,t)};
+  }
+
+  function renderSlot(){
+    const s = slotTotal();
+    const m = el("slotMoney"); m.textContent = "";
+    rowInto(m, I18N.t("baseOffer"), "NT$ " + fmt(s.base));
+    if(s.fam) rowInto(m, I18N.t("famRow"), "+ " + fmt(s.uplift));
+    if(RULES.bonusSlot[s.win]) rowInto(m, I18N.t(s.win === "late" ? "lateSlot" : "midSlot"), "+ " + RULES.bonusSlot[s.win]);
+    if(s.dis) rowInto(m, I18N.t("takenApart"), "+ 150");
+    if(s.inside) rowInto(m, I18N.t("carried"), "\u2212 150");
+    rowInto(m, I18N.t("neighbour"), I18N.t("pending"), "pend");
+    if(s.extras) rowInto(m, I18N.t("morePieces", {n:s.extras}), I18N.t("free"), "pend");
+    rowInto(m, I18N.t("creditOn"), "NT$ " + fmt(s.total), "sum");
+  }
+  ["dis","inside","family","extras"].forEach(id => el(id).addEventListener("change", renderSlot));
+  document.querySelectorAll('input[name=win]').forEach(r => r.addEventListener("change", renderSlot));
+
+  el("go3").addEventListener("click", () => { renderDays(); renderSlot(); show("s4", 3); });
+  el("back3").addEventListener("click", () => resetCustomer());
+  el("back4").addEventListener("click", () => show("s3", 2));
+
+  let lastS = null, lastKg = 0;
+  const dayEN = d => d.toLocaleDateString("en-GB", {weekday:"short", day:"numeric", month:"short"});
+  function renderDone(){
+    const s = lastS, kg = lastKg;
+    el("doneAmount").textContent = "NT$ " + fmt(s.total);
+    el("doneWhen").textContent = dayFmt(pickDay) + (zh() ? "，" : ", ") + WIN(s.win) + (s.win === "late" ? I18N.t("anyTime") : "");
+    inviteMsg = I18N.t("inviteMsg", {d: distName("district"), day: dayFmt(pickDay), win: WIN(s.win)});
+    el("inviteText").classList.add("hidden");
+    el("inviteBtn").textContent = I18N.t("inviteBtn");
+    el("impKg").textContent = fmt(kg);
+    el("impCo2").textContent = fmt(kg * RULES.co2PerKg);
+    const xl = el("extraLine");
+    xl.classList.toggle("hidden", !s.extras);
+    if(s.extras) xl.textContent = I18N.t("extraLine", {n: s.extras});
+  }
+  el("go4").addEventListener("click", () => {
+    const s = slotTotal();
+    const kg = (item.weight_kg || 20) + s.extras * 18;
+    lastS = s; lastKg = kg;
+    renderDone();
+    const zhDate = (pickDay.getMonth()+1) + "/" + pickDay.getDate() + "（" + "日一二三四五六"[pickDay.getDay()] + "）";
+    if(window.OPS) OPS.add({name_zh: item.match ? item.match.n : (item.name_zh || null), note_zh: zhDate + " " + ({early:"上午",mid:"中午",late:"下午"})[s.win] + " · " + (s.dis ? "已拆解" : "未拆解"), name:(item.match ? item.match.n : item.name) || "Furniture", d:el("district").value, grade:offer().grade, paid:1, extras:s.extras, flat:s.dis, price:offer().price, credit:s.total, fam:s.fam, bonus:(RULES.bonusSlot[s.win]||0) + (s.dis ? RULES.bonusDis : 0) - (s.inside ? RULES.penaltyInside : 0), disBonus:s.dis ? RULES.bonusDis : 0, kg:kg, src:"App", note:dayEN(pickDay) + ", " + (s.win === "early" ? "morning" : s.win === "mid" ? "midday" : "afternoon") + " \u00b7 " + (s.dis ? "taken apart" : "left assembled")});
+    show("s5", 4);
+  });
+  let inviteMsg = "";
+  el("inviteBtn").addEventListener("click", async () => {
+    const t = el("inviteText");
+    try{ await navigator.clipboard.writeText(inviteMsg); el("inviteBtn").textContent = I18N.t("inviteCopied"); t.classList.add("hidden"); }
+    catch(e){ t.textContent = inviteMsg; t.classList.remove("hidden"); el("inviteBtn").textContent = I18N.t("inviteFallback"); }
+  });
+
+  function resetCustomer(){
+    files = []; item = null; isSample = false;
+    shots.fill(null); renderShots();
+    const t = el("thumbs"); t.textContent = ""; t.classList.add("hidden");
+    el("go1").disabled = true;
+    el("e1").classList.add("hidden");
+    el("flag").className = "flag hidden";
+    el("go3").classList.remove("hidden");
+    el("price").value = "";
+    document.querySelector('input[name=win][value=late]').checked = true;
+    el("family").checked = true; el("dis").checked = true; el("inside").checked = false;
+    el("extras").value = "2";
+    el("pieces").value = "3";
+    document.querySelector('input[name=lift][value=yes]').checked = true;
+    show("s1", 0);
+  }
+  el("restart").addEventListener("click", resetCustomer);
+  I18N.onChange(() => {
+    renderFoot(); renderShots();
+    const vis = id => !el(id).classList.contains("hidden");
+    if(vis("s3") && item) renderOffer(true);
+    if(vis("s4") && item){ renderDays(); renderSlot(); }
+    if(vis("s5") && lastS) renderDone();
+    if(vis("sC") && lastB) renderAssisted();
+    if(vis("s2")) el("thinkMsg").textContent = I18N.t(isSample ? "loadingSample" : "readingPhotos");
+  });
+  renderFoot(); renderShots();
+
+  el("goB").addEventListener("click", () => show("sB", 1));
+  el("backB").addEventListener("click", () => show("s1", 0));
+  el("restartC").addEventListener("click", () => resetCustomer());
+
+  let lastB = null;
+  function renderAssisted(){
+    const lines = [I18N.t(lastB.noLift ? "aNoLift" : "aLift"), I18N.t(lastB.who === "building" ? "aBuilding" : "aResident"), I18N.t("aCredit")];
+    el("cBody").textContent = lines.join(zh() ? "" : " ");
+  }
+  el("goB2").addEventListener("click", () => {
+    const n = Math.max(1, +el("pieces").value || 1);
+    const noLift = document.querySelector('input[name=lift]:checked').value === "no";
+    const who = el("whoFor").value;
+    el("cPieces").textContent = n;
+    lastB = {noLift, who};
+    renderAssisted();
+    if(window.OPS) OPS.add({name_zh:(who==="building"?"整棟大樓收取，":"代為預約，")+n+" 件", note_zh:noLift?"只有樓梯":null, name:(who==="building"?"Building pickup, ":"Assisted booking, ")+n+" piece"+(n>1?"s":""), d:el("districtB").value, grade:null, est:true, paid:n, price:4500, credit:n*1850, bonus:n*275, disBonus:n*150, flat:true, kg:n*30, src:"Assisted", note:noLift?"stairs only":null});
+    show("sC", 4);
+  });
+})();
+</script>
+</body>
+</html>
